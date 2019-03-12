@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if success %}
+    <p>big ty. Will take a look&lt;p&gt;</p>
+
+{% endif %}
+    <p>
+        id={{ user.id }}
+        poke={{ user.pokedollars }}
+        real={{ user.realdollars }}
+        poke={{ user.pokeballs }}
+    </p>
+  <form action="" method=post>
+    <p>{{message}}</p>
+    <fieldset class="form-group">
+        {{ form.item_id.label }}
+        {{ form.item_id(class_="form-control") }}
+    </fieldset>
+    <fieldset class="form-group">
+        {{ form.quantity.label }}
+        {{ form.quantity(class_="form-control") }}
+    </fieldset>
+    {{ form.submit(class_="btn btn-primary") }}
+  </form>
+{% endblock %}
+

@@ -1,0 +1,105 @@
+<p><html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python eval</title>
+<link rel="stylesheet" type="text/css" href="codehilite.css" media="screen" />
+</head>
+<body></p>
+<h1>Exploiting sloppy use of <code>eval</code> in Python</h1>
+<p>May popular scripting languages like Perl, JavaScript, Python, and Ruby have an <a href="http://en.wikipedia.org/wiki/Eval"><code>eval</code></a> function, which takes in code as a string and runs it (e.g. <code>x = eval("1 + x")</code> can increment <code>x</code>). While often very convenient, using <code>eval</code> can be  dangerous when someone with malicious intent can influence the string being passed to <code>eval</code>.</p>
+<p>This challenge looks specifically at <code>eval</code> in Python. If you don't already know Python, you may wish to go over the <a href="http://docs.python.org/2/tutorial/index.html">Python tutorial</a>. Even if you already do, you may at times wish to refer back to the <a href="http://docs.python.org/2/library/index.html">Python library reference</a>, because we'll be dealing with some features of Python that don't get used on a regular basis.</p>
+<h2>Part 1</h2>
+<p>Let's jump right in. Consider the following code that implements a simple guessing game:</p>
+<div class="codehilite"><pre><span class="c"># example1.py</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="n">num</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">&quot;Guess the number! 1 to 100.&quot;</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;Your guess&gt; &#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">num</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Nope,&quot;</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="s">&quot;is wrong.&quot;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;You win!&quot;</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>For the most part, this program works as expected (<code>$</code> represents a shell prompt):</p>
+<div class="codehilite"><pre>$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; 42
+Nope, 42 is wrong.
+Your guess&gt; 99
+Nope, 99 is wrong.
+Your guess&gt;
+</pre></div>
+
+
+<p>In Python, <code>input(x)</code> is equivalent to <code>eval(raw_input(x))</code>: it takes user input, and evaluates it as a Python expression. This means that the program will happily accept any input that's a valid Python expression:</p>
+<div class="codehilite"><pre>$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; 3*4
+Nope, 12 is wrong.
+Your guess&gt; &quot;hello&quot;
+Nope, hello is wrong.
+Your guess&gt; [1,2,3,4]
+Nope, [1, 2, 3, 4] is wrong.
+Your guess&gt;
+</pre></div>
+
+
+<p>But on input that's not a valid Python expression, <code>eval</code> will raise an exception.</p>
+<div class="codehilite"><pre>$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; !@#$%^&amp;*()
+Traceback (most recent call last):
+  File &quot;example1.py&quot;, line 6, in &lt;module&gt;
+    guess = input(&#39;Your guess&gt; &#39;)
+  File &quot;&lt;string&gt;&quot;, line 1
+    !@#$%^&amp;*()
+    ^
+SyntaxError: invalid syntax
+$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; hello
+Traceback (most recent call last):
+  File &quot;example1.py&quot;, line 6, in &lt;module&gt;
+    guess = input(&#39;Your guess&gt; &#39;)
+  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name &#39;hello&#39; is not defined
+$
+</pre></div>
+
+
+<p>Notice that the exceptions above weren't the same. The first was a SyntaxError, which will be raised on any garbage string that isn't valid Python. The second was a NameError; this is because the string “<code>hello</code>” (without quotes) is a syntactically valid expression, which should evaluate to whatever value is stored in the variable <code>hello</code>. Of course, no such variable was ever defined in example1.py, so an exception is raised.</p>
+<p>Now, if you've been thinking about it, you've probably guessed the punchline of this exercise already. At the time that <code>input()</code> is called in example1.py, the string “<code>num</code>” (without quotes) is a valid expression which of course evaluates to the value stored in the variable <code>num</code>. This makes it very easy to cheat the guessing game.</p>
+<div class="codehilite"><pre>$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; num
+You win!
+$
+</pre></div>
+
+
+<p>What we've done here is exploited the fact that <code>eval()</code> gives us a <em>lot</em> of power, including the power to get to things that we weren't supposed to. Keep that in mind going forward: “getting to things that you aren't supposed to” is sort of a big deal for hackers.</p>
+<h3>Task 1</h3>
+<p>If you've been astutely following along, you now know enough to complete the first for-points task here. The following script is running on our servers. Your job is to get it to print out the secret <code>flag</code> (which has of course been redacted from the version below), and submit it back at the main picoCTF site. You can connect to the script by running <code>nc python.picoctf.com 6361</code> on a UNIX terminal. You can also download this script and run it on your own computer to figure out what do to.</p>
+<div class="codehilite"><pre><span class="c"># task1.py</span>
+<span class="k">print</span> <span class="s">&quot;Welcome to mystery math!&quot;</span>
+
+<span class="n">flag</span> <span class="o">=</span> <span class="s">&quot;xxxxxxxxxx&quot;</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Enter number 1&gt; &quot;</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">*</span> <span class="n">x</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Enter number 2&gt; &quot;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">y</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">-</span> <span class="n">y</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Here ya go! &quot;</span><span class="p">,</span> <span class="n">flag</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Your lucky number is &quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</pre></div>
+
+
+<p></body>
+</html></p>

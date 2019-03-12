@@ -1,0 +1,41 @@
+<style>
+.header {
+	height: 64px;
+	border-bottom: 1px solid #333;
+	background: url(logo_bg.jpg) repeat-x top left;
+	position: relative;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+	-webkit-user-select: none;      
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+h2 {
+	font-family: sans-serif;
+	color: #202020;
+}
+
+a {
+	color:white;
+}
+</style>
+
+<div class="header">
+		<h1 style="position:absolute; top:5px; left:10px; font-family: sans-serif; font-weight: 900"><a href="/" style="opacity:1.0; text-decoration: none;">Gnome</a><a href="/" style="opacity:0.6; text-decoration: none;">Arena</a></h1>
+		<img src="<?php echo getImage($_SESSION['name']); ?>" style="position:absolute; width:48px; height:48px; top:5px; right:5px"></img>
+		<a href="/settings.php" style="text-decoration: none; position:absolute; color:white; top:4px; right:58px; font-family: sans-serif; font-size: 24px;">
+			<?php echo $_SESSION['name']?>
+		</a>
+		<a href="/settings.php" style="position:absolute; color:white; top:30px; right:60px; font-family: sans-serif; font-size: 15px;">
+			Settings
+		</a>
+	</div>

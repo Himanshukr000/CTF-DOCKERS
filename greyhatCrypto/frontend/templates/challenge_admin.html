@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Challenge Admin{% end %}
+
+{% block body %}
+  Metadata:
+  <div>
+    {% for k, v in metadata.iteritems() %}
+      {{ k }} : {{ v }}<br>
+    {% end %}
+  </div>
+  <br>
+  Name: {{ escape(challenge_name) }}<br>
+  Author: {{ escape(challenge_author) }}<br>
+  Points: {{ escape(str(challenge_points)) }}<br>
+  Flag: "{{ escape(challenge_flag) }}"<br>
+  Status: {{ escape(challenge_status) }}
+    <form action="" method="POST">
+      <input type="hidden" name="action" value="start">
+      <input type="submit" value="Start">
+    </form>
+    <form action="" method="POST">
+      <input type="hidden" name="action" value="stop">
+      <input type="submit" value="Stop">
+    </form>
+  <br>
+  {{ escape(challenge_description.replace('\n', '<br>')) }}<br>
+{% end %}

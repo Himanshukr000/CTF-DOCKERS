@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 70,
+	"desc" : "<p>Math is cool! Use the RSA algorithm to decode the secret message, c, p, q, and e are parameters for the RSA algorithm. <a target='_blank' href='/problems/rsa.txt'>Problem</a></p>",
+	"displayname" : "RSA",
+	"grader" : "phase3_rsa.py",
+	"hint" : "<a href='http://en.wikipedia.org/wiki/RSA_(algorithm)' target='_blank'>This page</a> should tell you enough to figure the formulae out on this one.  Then it's just math with very large numbers.",
+	"pid" : "51745431054c91c14b00000f",
+	"threshold" : 1,
+	"weightmap" : {
+		"51788c396c342fba03000006" : 1,
+		"5161e2402f0686520c000009" : 1
+	}
+}

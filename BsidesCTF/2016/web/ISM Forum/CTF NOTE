@@ -1,0 +1,5 @@
+1) You need to run `python main.py` to get the web application running.
+2) You need to register the admin user with the password '0mHYA8ZI0GsiCmot' if you remove / reset the database
+3) Use casperjs to run 'browse.js'
+4) Images need to be uploaded to a /home/ctf/xss/uploads/ folder - or edited in main.py
+5) exiftool needs to be installed on the system

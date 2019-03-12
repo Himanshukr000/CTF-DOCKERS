@@ -1,0 +1,13 @@
+{
+	"autogen" : false,
+	"basescore" : 40,
+	"desc" : "<p>You notice that the indicator light near the robot’s antenna begins to blink. Perhaps the robot is connecting to a network? Using a wireless card and the network protocol analyzer Wireshark, you are able to create a PCAP file containing the packets sent over the network.</p> <p>You suspect that the robot is communicating with the crashed ship. Your goal is to find the location of the ship by inspecting the network traffic.</p> <p>You can perform the analysis online on <a href='http://www.cloudshark.org/captures/bc1c0a7fae2c' target='_blank'>Cloudshark</a> or you can download the <a href=/problems/first_contact.pcap> PCAP file</a>.</p>",
+	"displayname" : "First Contact",
+	"grader" : "first_contact.py",
+	"hint" : "<p>It may help to learn a bit about <a href='http://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.Introduction_to_Wireshark_and_HTTP__/aw/streaming/ecs_kurose_compnetw_6/wireshark_videonotes.m4v' target='_blank'>network communication on the Internet and Wireshark</a>.</p>",
+	"pid" : "5161fa8a2f0686520c00000e",
+	"threshold" : 1,
+	"weightmap" : {
+		"512a8622b393a33f2cf9b37f" : 1
+	}
+}

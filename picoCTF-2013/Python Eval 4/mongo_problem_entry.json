@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 130,
+	"desc" : "<p>Solving the previous Python Eval probelms will help you prepare for <a target='_blank' href='/problems/pyeval/stage4.html'>Python Eval 4</a></p>",
+	"displayname" : "Python Eval 4",
+	"grader" : "phase4_pyeval4.py",
+	"pid" : "5174332a054c91c14b000007",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

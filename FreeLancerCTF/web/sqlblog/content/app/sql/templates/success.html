@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% autoescape false %}
+        {{ id }}
+        {{ title }}
+        {{ content }}
+    {% endautoescape %}
+    </br>
+    <a href="/">try again</a>
+{% endblock %}

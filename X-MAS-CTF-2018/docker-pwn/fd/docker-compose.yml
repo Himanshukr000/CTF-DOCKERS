@@ -1,0 +1,15 @@
+version: '3'
+services:
+  xmas_ctf:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: file_desciptor
+    ports:
+      - "10004:10004"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 50M
+    entrypoint: /etc/chall_init.sh

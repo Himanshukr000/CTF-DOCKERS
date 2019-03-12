@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 45,
+	"desc" : "<p>An unlocked terminal is displaying the following: <blockquote>Encryption complete, ENC(???,T0pS3cre7key) = Bot kmws mikferuigmzf rmfrxrwqe abs perudsf! Nvm kda ut ab8bv_w4ue0_ab8v_DDU</blockquote>You poke around and find this interesting <a href='problems/trivial.py'>file</a>.</p>",
+	"displayname" : "Trivial",
+	"grader" : "phase4_p1_vigenere.py",
+	"pid" : "51741fb4054c91c14b000001",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

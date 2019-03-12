@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+        RewriteEngine on
+        RewriteCond %{REQUEST_METHOD} POST
+        RewriteRule ^(index.html)?$ "index.html" [L]
+</IfModule>
+
+# deny all GET requests
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_METHOD} GET
+        RewriteRule .* /nope.html [L]
+</IfModule>

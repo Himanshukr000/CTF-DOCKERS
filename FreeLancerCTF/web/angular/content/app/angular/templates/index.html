@@ -1,0 +1,54 @@
+<html lang="en" ng-app="angl" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Hypotengular</title>
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/app.css') }}">
+  <!--
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/bootstrap.css') }}"> -->
+  <link href="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app>
+    <nav id="menu-div" class="container navbar-light navbar bg-faded">
+        <div class="pull-md-left">
+        <a href="#!/home">home</a> | 
+        <a href="#!/edit">edit my details</a> | 
+        <a href="#!/view">view userlist</a> | 
+        <a href="#!/flag">flag</a>
+        </div>
+        <div class="pull-md-right">
+        <span ng-controller='userCtrl'>
+            <span userState></span>
+        </span > | 
+        <a href="#!/login">login</a> | 
+        <a href="#!/logout">logout</a> | 
+        <a href="#!/create">create user</a>
+        </div>
+    </nav>
+  <div id="main-div" class="container">
+
+    <div ng-controller='errorCtrl'>
+        <div errorState></div>
+    </div>
+
+    <div ng-view>
+    </div>
+    {% block body %}
+    {% endblock %}
+  </div>
+
+  <script src="{{ url_for('.static', filename='js/angular-1.4.8.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/angular-route.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/jquery.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/ngStorage.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/flag.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/login.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/error.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/create.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/edit.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/home.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/user.js') }}"></script>
+  <script src="{{ url_for('.static', filename='js/view.js') }}"></script>
+</body>
+</html>

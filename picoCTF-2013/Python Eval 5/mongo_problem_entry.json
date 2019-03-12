@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 140,
+	"desc" : "<p>A true challenge awaits you at python.picoctf.com:6365. <a href='/problems/pyeval/task5.py'>Source</a>.</p>",
+	"displayname" : "Python Eval 5",
+	"grader" : "phase4_pyeval5.py",
+	"pid" : "51743341054c91c14b000008",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

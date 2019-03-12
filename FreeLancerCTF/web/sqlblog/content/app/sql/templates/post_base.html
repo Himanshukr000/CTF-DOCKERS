@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4> frontpage </h4>
+    {% for post in post_list %}
+        <div class="">
+            <a href="{{ post.hash }}"><h4> {{ post.title }} </h4></a>
+            <p> {{ post.content }} </p>
+        </div>
+    {% endfor %}
+{% endblock %}
+

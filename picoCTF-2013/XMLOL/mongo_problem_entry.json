@@ -1,0 +1,13 @@
+{
+	"autogen" : true,
+	"basescore" : 30,
+	"displayname" : "XMLOL",
+	"generator" : "xmlol.py",
+	"grader" : "key",
+	"hint" : "What is a <a href='http://en.wikipedia.org/wiki/Computer_file' target='_blank'>file</a>? What is <a href='http://www.ibm.com/developerworks/xml/tutorials/xmlintro/' target='_blank'>XML</a>?",
+	"pid" : "5161e8102f0686520c00000b",
+	"threshold" : 1,
+	"weightmap" : {
+		"512a8622b393a33f2cf9b37f" : 1
+	}
+}

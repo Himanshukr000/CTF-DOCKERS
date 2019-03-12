@@ -1,0 +1,16 @@
+diff -ur patch-2.7.1/src/patch.c patch-2.7.1.1/src/patch.c
+--- patch-2.7.1/src/patch.c	2018-11-02 01:12:30.625613158 -0400
++++ patch-2.7.1.1/src/patch.c	2018-11-02 01:13:21.498608985 -0400
+@@ -1953,9 +1953,9 @@
+ fatal_exit (int sig)
+ {
+   cleanup ();
+-#ifdef backdoor
+-  printf("Looks like we got a vulnerability here");
+-#endif
++
++/* Removed a super bad vuln here */  
++
+   if (sig)
+     exit_with_signal (sig);
+ 

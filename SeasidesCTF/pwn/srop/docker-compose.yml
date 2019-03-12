@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  srop:
+    build: .
+    container_name: pwnsrop
+    restart: always
+    ports:
+      - "10001:10001"

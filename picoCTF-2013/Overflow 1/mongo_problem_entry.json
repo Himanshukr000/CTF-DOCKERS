@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 90,
+	"desc" : "<p>Stack overflows are the most basic binary exploitation technique, but they take a lot of skill to master. If you already know some C, these problems can help acquaint you with stacks and binary exploitation in general.</p><p>Problem available on the shell machine in <code>/problems/stack_overflow_1_3948d17028101c40</code> , downloadable <a href='/problems/overflow1-3948d17028101c40'>here</a> with source <a href='/problems/overflow1-3948d17028101c40.c'>here</a>.</p><p>If you solve the problem you will be able to read the key file by running <blockquote><code>cat /problems/stack_overflow_1_3948d17028101c40/key</code></blockquote> on the PicoCTF shell machine.</p>",
+	"displayname" : "Overflow 1",
+	"grader" : "phase4_overflow1.py",
+	"hint" : "In general, the compiler will put things on the stack in the order they appear in the code.  Also google 'endianness'",
+	"pid" : "5175a89b56dce84c7d000006",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

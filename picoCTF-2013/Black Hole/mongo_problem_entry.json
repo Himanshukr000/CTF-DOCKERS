@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 115,
+	"desc" : "<p>Near the galactic core, you find a beacon indicating that an ancient civilization hid one of their worlds <a href='/problems/blackhole.img'>within a nearby black hole</a>.  Is this what passes for intergalactic humor, or is there actually something in there?</p><p>The disk image can be found on the shell machines at <code>/problems/blackhole.img</code> and the contents of the image are available in <code>/problems/blackhole/</code></p>",
+	"displayname" : "Black Hole",
+	"grader" : "blackhole_grader.py",
+	"hint" : "ls -b will help you get past the first hurdle.  Good luck and godspeed.",
+	"pid" : "5176cb706c342fba03000001",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

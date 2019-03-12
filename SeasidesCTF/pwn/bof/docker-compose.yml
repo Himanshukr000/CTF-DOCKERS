@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  classico:
+    build: .
+    container_name: pwnclassico
+    restart: always
+    ports:
+      - "10004:10004"

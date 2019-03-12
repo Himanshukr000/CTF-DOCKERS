@@ -1,0 +1,10 @@
+version: '3'
+services:
+  xmas_ctf:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: trust
+    ports:
+      - "11000:31337"
+    entrypoint: /etc/chall_init.sh

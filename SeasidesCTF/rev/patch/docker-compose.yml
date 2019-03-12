@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  patch:
+    build: .
+    container_name: revpatch
+    tmpfs: /tmp
+    restart: always
+    ports:
+      - "10006:10006"

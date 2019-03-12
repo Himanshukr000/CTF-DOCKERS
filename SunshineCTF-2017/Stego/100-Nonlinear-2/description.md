@@ -1,0 +1,3 @@
+That signal you decoded for us led to a file on a remote server. It looks like a standard hex dump, but the binary info doesn't do anything. It seems like, once again, things aren't what they appear to be...
+
+Author: levi_hackucf

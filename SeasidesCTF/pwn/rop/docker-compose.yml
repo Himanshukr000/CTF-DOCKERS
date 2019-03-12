@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  modern:
+    build: .
+    container_name: pwnmodern
+    restart: always
+    ports:
+      - "10002:10002"

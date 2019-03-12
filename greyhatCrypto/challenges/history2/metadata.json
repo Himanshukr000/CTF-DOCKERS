@@ -1,0 +1,15 @@
+{
+    "description": "A historical cipher. The flag is the decrypted contents of the flag_ciphertext.txt file.",
+    "author": "Kennon Bittick",
+    "uuid": "9244d0a6-a702-11e3-a58a-8ca982ba0906",
+    "flag": "NOTMUCHOFANIMPROVEMENT",
+    "points": 100,
+    "name": "history2",
+    "public_files": [
+        "large_ciphertext.txt",
+        "flag_ciphertext.txt"
+    ],
+    "hints": [
+        "Can you break the indecipherable cipher?"
+    ]
+}

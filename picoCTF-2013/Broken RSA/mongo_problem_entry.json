@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 180,
+	"desc" : "<p><a href='/problems/broken_rsa_source.py' target='_blank'>This RSA service</a> seems to be broken. They encrypt the flag and send it to you each time... but they throw out the private key and you never get to see it. Any ideas on how to recover the flag?</p><p>Running on vuln.picoctf.com</p>",
+	"displayname" : "Broken RSA",
+	"grader" : "phase4_broken_rsa.py",
+	"hint" : "Connect from the shell with 'nc vuln.picoctf.com 6666'. Read up on RSA and try to figure out why this might be bad... Good luck!",
+	"pid" : "517b49f917f5e16305000001",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

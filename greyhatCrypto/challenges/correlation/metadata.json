@@ -1,0 +1,9 @@
+{
+    "name": "correlation",
+    "author": "Robert Grosse",
+    "description": "",
+    "points": 300,
+    "flag": "NowYou'reThinkingwithPlaintexts",
+
+    "public_files": ["correlation.py", "encrypted.png"]
+}

@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  raceme:
+    build: .
+    container_name: pwnraceme
+    restart: always
+    ports:
+      - "31336:31336"

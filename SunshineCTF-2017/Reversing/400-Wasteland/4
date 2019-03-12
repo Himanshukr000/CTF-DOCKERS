@@ -1,0 +1,40 @@
+4MdeXbQIJdThWqicmv1pKjo3V5gGON0jcRQJGpcedJNEQPc2rY
+	if (strncmp(input, "South", 5) == 0)
+	{
+		printf("You head South, to the endless marshes.\n");
+		float f;
+		char buf0[5];
+		fgets(buf0, sizeof(buf0), stdin);
+		f = atof(buf0);
+
+		if (f < 12.684125)
+		{
+			puts("Too much");
+			exit(0);
+		}
+
+		if (f > 12.684125)
+		{
+			puts("Too little");
+			exit(0);
+		}
+		
+		else
+		{
+			int hi;
+			printf("Please enter 5 characters to get hashed (btw this is really an x86 binary)\n");
+			long hash = djb2hash();
+			char hash_prompt[10];
+			
+			fgets(hash_prompt, sizeof(hash_prompt), stdin);
+			unsigned long hash_user = atol(hash_prompt);
+			if (hash == hash_user)
+			{
+				printf("They match\n");
+				piece = fopen("4", "r");
+				pathfinding(piece);
+			}
+			
+		}
+		
+	}

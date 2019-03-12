@@ -1,0 +1,9 @@
+{
+    "name": "solitary",
+    "author": "Robert Grosse",
+    "description": "",
+    "points": 300,
+    "flag": "COUNTINGCUTAINTNOBODYGOTTIMEFORTHAT",
+
+    "public_files": ["solitary.py", "encrypted.txt", "knownplain.txt"]
+}

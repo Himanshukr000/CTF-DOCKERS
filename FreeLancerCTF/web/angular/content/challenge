@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# This needs to be here to make sure the command is run properly
+cd /home/ctf
+
+# Call your challenge here and remove these lines
+echo "Starting challenge"
+twistd -n web --port 9091 --wsgi app.app
+#python3 run.py
+

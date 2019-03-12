@@ -1,0 +1,11 @@
+<!--#if expr="%{QUERY_STRING} =~ /name=(.+)/ && $1 =~ /([A-Za-z0-9-_]+)/"-->
+<!--#set var="name" value="$0" -->
+<!--#endif-->
+
+<h1>Hello <!--#echo var="name" --></h1>
+
+<form action="?">
+  <input name="form.html" type="hidden" value=""/>
+  <input name="name" type="text" value=""/>
+  <input type="submit"/>
+</form>

@@ -1,0 +1,5 @@
+CC=gcc
+
+all:
+
+clean:

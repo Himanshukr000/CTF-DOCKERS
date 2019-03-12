@@ -1,0 +1,9 @@
+{
+    "name": "zzzsack",
+    "author": "Robert Grosse",
+    "description": "",
+    "points": 300,
+    "flag": "IHopeYouDidn'tGoToThe TroubleOfUsingShamir'sAttackHere",
+
+    "public_files": ["zzzsack.py", "encrypted", "public", "keygen.py"]
+}

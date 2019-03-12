@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 120,
+	"desc" : "<p>In a ruined city on a forgotten world, you find a broken cogitator controlling access to the Vault.  You have blueprints for the machine, and a stickynote attached to the monitor with the encrypted input.  The machine seems to have crashed while decrypting, and generated a <i>core dump</i>, too.  Maybe if you can get the encryption keys out of the core dump, you can decrypt the ciphertext and get the vault open...  <a href='/problems/core_decrypt.tar'>Files available for download here</a> on on the shell machine in <code>/problems/core_decrypt.tar</code></p>",
+	"displayname" : "Core Decryption",
+	"grader" : "core_decrypt_grader.py",
+	"hint" : "gdb can load and read core files",
+	"pid" : "516ae36c2f0686520c000017",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

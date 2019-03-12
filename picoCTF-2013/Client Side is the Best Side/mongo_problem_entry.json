@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 75,
+	"desc" : "Luckily the ship has a <a href='/problems/clientside.html' target='_blank'>web-based authentication system</a>! Hmm…even though you don't know the password, I bet you can still get in!",
+	"displayname" : "Client Side is the Best Side",
+	"grader" : "phase3_3d_clientside.py",
+	"hint" : "First rule of web hacking: always read the page source",
+	"pid" : "51788a1b6c342fba03000005",
+	"threshold" : 1,
+	"weightmap" : {
+		"51788c396c342fba03000006" : 1,
+		"5161e2402f0686520c000009" : 1
+	}
+}

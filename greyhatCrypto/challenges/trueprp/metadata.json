@@ -1,0 +1,16 @@
+{
+	"name": "trueprp",
+	"uuid": "11303a27-6058-4bd1-a33a-4d4268751723",
+	"author": "Nick Johnson",
+	"description": "I'd like an md5sum of plaintext2, please.",
+
+    "flag": "7d59b13a396d6ca62acc14dc00ebd311",
+	"points": 300,
+	
+	"public_files": [
+		"trueprp.py",
+        "plaintext",
+		"ciphertext",
+        "ciphertext2"
+	]
+}

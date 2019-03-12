@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 180,
+	"desc" : "<p>A simple introduction to the format string family of vulnerabilities. These let you read and write memory in fantastic ways.</p><p>Problem can be found in <blockquote><code>/problems/format_2_358e7afd8b3804d8</code></blockquote> on the shell machine, binary downloadable <a href='/problems/format2'>here</a> source <a href='/problems/format2.c'>here</a>.</p>",
+	"displayname" : "Format 2",
+	"grader" : "phase4_format2.py",
+	"hint" : "The trick here is to overwrite one of the entries in the global offset table",
+	"pid" : "51759fef56dce84c7d000001",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

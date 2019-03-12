@@ -1,0 +1,65 @@
+{
+    "frame": {
+        "title": "LC3CTF",
+        "bottom": "Powered by Arms Race",
+        "toggle": "Toggle navigation",
+        "login": "Sign in",
+        "logged_in": "Logged in as",
+        "logout": "Log out"
+    },
+    "main": {
+        "title": "LC3 CTF",
+        "text": "Welcome to LC3 CTF!"
+    },
+    "about": {
+        "title": "About",
+        "news": "News",
+        "news_text": "No news yet",
+        "rules": "Rules",
+        "rules_text": "No rules yet"
+    },
+    "tasks": {
+        "title": "Tasks"
+    },
+    "task": {
+        "description": "Description",
+        "attachment": "Attachment",
+        "submit": "Submit",
+        "success": "Correct flag!",
+        "failure": "Incorrect flag",
+        "solution_format": "solved by %d",
+        "no_description": "(none)",
+        "placeholder": "flag{insert_flag_here}"
+    },
+    "scoreboard": {
+        "title": "Scoreboard",
+        "player": "Player",
+        "score": "Score"
+    },
+    "achivements": {
+        "title": "Achivements"
+    },
+    "error": {
+        "title": "Error",
+        "unknown": {
+            "ec": 403,
+            "msg": "Unknown error"
+        },
+        "login_required": {
+            "ec": 403,
+            "msg": "You need to be logged in to see this page"
+        },
+        "invalid_credentials": {
+            "ec": 403,
+            "msg": "Invalid username or password"
+        },
+        "task_not_found": {
+            "ec": 403,
+            "msg": "TBD"
+        },
+        "404": {
+            "ec": 404,
+            "msg": "Content not found"
+        }
+    }
+}

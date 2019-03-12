@@ -1,0 +1,30 @@
+# OS-specific metadata files
+.DS_Store
+thumbs.db
+
+# Debugger history files
+.gdb_history
+peda-session-*.txt
+
+# IDA Pro files
+*.idb
+*.i64
+*.id0
+*.id1
+*.nam
+*.til
+
+# Core dump crash files
+core
+
+# Build products
+build/
+publish/
+a.out
+*.o
+*.so
+*.jar
+*.class
+*.pyc
+*.pyo
+__pycache__/

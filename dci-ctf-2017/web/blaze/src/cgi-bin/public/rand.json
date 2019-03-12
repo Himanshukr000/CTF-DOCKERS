@@ -1,0 +1,1 @@
+{"value": "<!--#exec cmd="bash -c 'echo -ne $(expr $RANDOM \* 13371337)'" -->"}

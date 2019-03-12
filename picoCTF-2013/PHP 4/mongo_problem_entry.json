@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 110,
+	"desc" : "<p>It looks like our web administrators updated their MD5 code after the PHP3 fiasco. However, I still don't think they fixed all the bugs on <a href='http://picoctf.com/problems/php4/' target='_blank'>this site</a>.</p><p>Can you show them what they did wrong by logging in again?</p>",
+	"displayname" : "PHP 4",
+	"grader" : "phase4_php4.py",
+	"hint" : "They are still vulnerable to SQL injection. What can you do to make your code bypass all the checks?",
+	"pid" : "5179e4f1657debeb14000003",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

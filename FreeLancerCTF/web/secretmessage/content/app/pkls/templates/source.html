@@ -1,0 +1,60 @@
+from flask import render_template, request, current_app, flash
+from . import pkls, forms
+from .secret import g, h
+import dill, base64
+
+a = #REDACTED 
+b = #REDACTED
+
+default_string = 'gAJVFnRvdGFsbHlub3R0aGVzZWNyZXRrZXlxAC4='
+
+def set_cookie(message):
+    mesage = forms.messsage_form()
+    flash(message)
+    redirect_to_index = render_template('blank.html', form = mesage)
+    messssage = current_app.make_response(redirect_to_index)
+    messssage.set_cookie('f',value = default_string)
+    return messssage
+
+@pkls.route('/', methods=['GET', 'POST'])
+def pkls_home():
+    mesage = forms.messsage_form()
+    message = 'guess the next messsage key'
+    if 'f' not in request.cookies:
+        return set_cookie()
+
+    if request.method == 'POST':
+        next_messsage = g()
+        messsage = request.form['secret_key'] if request.form['secret_key'] else ''
+        if 'f' in request.cookies:
+            try:
+                messsage = a(b(request.cookies['f']))
+            except:
+                return set_cookie('unable to process f')
+
+        if messsage.lower() == '':
+            flash("please enter a guess for the next messsage key")
+            return render_template('blank.html', form = mesage)
+
+        if messsage.lower() == next_messsage:
+            flash("congratulations you guessed the messsage key: {0}".format(h()))
+        else:
+            flash("{0} was not the correct messsage key".format(messsage.lower()))
+    return render_template('blank.html', form = mesage)
+
+@pkls.route('/robots.txt')
+def pkls_robots():
+    robots = '''
+User-agent: *
+Disallow: /?
+Disallow: /source.py
+Flag: {0}'''.format(flag2)
+    response = current_app.make_response(robots)
+    response.mimetype = "text/plain"
+    return response
+
+@pkls.route('/source.py')
+def pkls_source():
+    messssage = current_app.make_response(render_template('source.html'))
+    messssage.mimetype = "text/plain"
+    return messssage

@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 80,
+	"desc" : "<p>We recorded the following <a href='/problems/robo.mp3'>communication</a> between two robots. Find out what evil things they are plotting, and recover their secret key!</p>",
+	"displayname" : "Robomunication",
+	"grader" : "roboop.py",
+	"hint" : "What are some famous encodings that only use two values?",
+	"pid" : "516ad9162f0686520c000014",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

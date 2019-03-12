@@ -1,0 +1,8 @@
+version: "3"
+services:
+  shell:
+    build: ./
+    image: bin200
+    ports:
+      - "8002:8002"
+    restart: always

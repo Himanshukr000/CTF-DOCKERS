@@ -1,0 +1,37 @@
+FUJPeOzcTwoSPq5OpuLrhAzD35myz3XV38K2aQlqv1vZIfJNcM1HyiaLk88CO	
+	if (strncmp(input, "West", 4) == 0)
+	{
+		printf("You head West, towards the green sea.\n");
+		int i = 1;
+		while (i<50)
+		{
+			i = i*2;
+			printf("The more you wander, the more you find.\n");
+		}
+
+		char buf0[100];
+		int check = 0;
+		fgets(buf0, sizeof(buf0), stdin);
+		check = atoi(buf0);
+		if (check == i)
+		{
+			int i2 = 2;
+			int i3;
+			for (i = 0; i < 20; i++)
+			{
+				i2 = i2 *2;
+				i2 = i2 + 245;
+				i2 = i2 * 1785;
+				i3 = i2 % 2354;
+			}
+			char buf1[50];
+			fgets(buf1, sizeof(buf1), stdin);
+			i2 = atoi(buf1);
+			if (i2 == i3)
+			{
+				piece = fopen("3", "r");
+				pathfinding(piece);
+			} 
+		}
+	
+	}

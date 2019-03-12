@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 70,
+	"desc" : "<p>Someone or something stuck a random flyer on your space ship that reads:<blockquote>cslcehesehft ohrumvc zmvm scmk ht ptohmte ehbmc mxmt eufsju eumq pvm dshem mpchgq lvfymt zheu nsce p rmtohg ptk rprmv, fv bfvm vmomtegq lq ofbbft ofbrsemvhwmk effgc. qfsv ymq hc: zumt_kf_zm_jme_ef_eum_upvk_cesii</blockquote></p>",
+	"displayname" : "Classic",
+	"grader" : "phase4_p2_substitution.py",
+	"pid" : "5174230c054c91c14b000002",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

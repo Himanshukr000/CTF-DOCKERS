@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 70,
+	"desc" : "<p>Near the Sun, you find a malfunctioning warp beacon which is broadcasting a distress signal in a navigational channel.  It looks like it's been damaged by solar radiation, and <a href='/problems/recovery.zip'>some of its data</a> have been corrupted.  If you can recover it, perhaps it will point at you to something interesting.</p>",
+	"displayname" : "NAVSAT",
+	"grader" : "zip_reco_grader.py",
+	"hint" : "<a href='http://en.wikipedia.org/wiki/List_of_file_signatures' target='_blank'>This</a> list might be of interest to you",
+	"pid" : "516b1e8f2f0686520c00001d",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

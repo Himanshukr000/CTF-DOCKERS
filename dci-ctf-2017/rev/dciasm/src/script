@@ -1,0 +1,4 @@
+watch (unsigned short)r4
+r
+p (unsigned short)ip
+quit

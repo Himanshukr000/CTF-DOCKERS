@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 100,
+	"desc" : "<p>Stack overflows are the most basic binary exploitation technique, but they take a lot of skill to master. If you already know some C, these problems can help acquaint you with stacks and binary exploitation in general.</p><p>Problem available on the shell machine in <code>/problems/stack_overflow_2_44e63640e033ff2b</code> , downloadable <a href='/problems/overflow2-44e63640e033ff2b'>here</a> with source <a href='/problems/overflow2-44e63640e033ff2b.c'>here</a>.</p><p>If you solve the problem you will be able to read the key file by running <blockquote><code>cat /problems/stack_overflow_2_44e63640e033ff2b/key</code></blockquote> on the PicoCTF shell machine.</p>",
+	"displayname" : "Overflow 2",
+	"grader" : "phase4_overflow2.py",
+	"hint" : "A function's arguments live on top of its stack frame, above its saved ebp and return address.  Make sure not to clobber those, though...",
+	"pid" : "5175a8b256dce84c7d000007",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

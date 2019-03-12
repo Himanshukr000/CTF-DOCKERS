@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 85,
+	"desc" : "<p>We found a <a href='https://picoctf.com/problems/php2/' target='_blank'>simple web page</a> that seems to want us to authenticate, but we can't figure out how... can you? </p>",
+	"displayname" : "PHP 2",
+	"grader" : "phase4_php2.py",
+	"pid" : "5179a797657debeb14000001",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

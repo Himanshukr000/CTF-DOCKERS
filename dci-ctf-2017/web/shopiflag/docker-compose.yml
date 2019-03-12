@@ -1,0 +1,42 @@
+version: "3"
+services:
+
+    web:
+        image: shopiflag_web
+        deploy:
+            restart_policy:
+                condition: on-failure
+        ports:
+                - "127.0.0.1:30000:80"
+
+    admin-server:
+        image: botnet
+        deploy:
+            restart_policy:
+                condition: on-failure
+        ports:
+                - "127.0.0.1:31000:80"
+
+    bots:
+        image: httpbots
+        deploy:
+            restart_policy:
+                condition: on-failure
+
+    db:
+        image: mysql
+        deploy:
+            restart_policy:
+                condition: on-failure
+        environment:
+            MYSQL_DATABASE: shopiflag_ctf
+            MYSQL_ROOT_PASSWORD: a9Ea6UQWdWM2eXyi
+        volumes:
+            - ./config/mysql:/docker-entrypoint-initdb.d
+            - ./datadir:/var/lib/mysql
+            - ./config/my.cnf:/etc/mysql/conf.d/my.cnf
+
+networks:
+    default:
+        external:
+            name: mysql-network

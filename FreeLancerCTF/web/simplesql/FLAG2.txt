@@ -1,0 +1,1 @@
+FCTF{duh_admin_password_is_like_the_best_cr3d3ntials}

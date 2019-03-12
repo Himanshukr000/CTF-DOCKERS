@@ -1,0 +1,7 @@
+By Tyler
+Simple problem to get people familiar with cookies and how to change them.
+The Docking Bay Ship Status page has a hidden comment which tells the
+users that the cookie is expected to be "authorization=administrator". If they
+submit to the page with that cookie, they get the ships in the bay, as well
+which ships are available for launch. The key is any docking bay ID which
+has a ship with status "Awaiting Launch".

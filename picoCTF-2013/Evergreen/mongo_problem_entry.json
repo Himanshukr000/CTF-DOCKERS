@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 110,
+	"desc" : "<p>Figure out the key from this <a href='problems/evergreen.zip'>game</a></p>",
+	"displayname" : "Evergreen",
+	"grader" : "evergreen.py",
+	"hint" : "Sorry, no hint for this problem :(",
+	"pid" : "51744c0e054c91c14b00000d",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

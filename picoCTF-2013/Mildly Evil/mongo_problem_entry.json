@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 185,
+	"desc" : "<p>This binary reversing challenge seems deceptively simple. Can you figure out the key that it accepts?</p><p>Binary available on the shell machine in <code>/problems/mildly_evil/</code> and available for download <a href='/problems/mildly_evil'>here</a></p>",
+	"displayname" : "Mildly Evil",
+	"grader" : "phase4_mildlyevil.py",
+	"hint" : "You probably want to reverse this dynamically, with a tool like <a href='http://www.dirac.org/linux/gdb/' target='_blank'>gdb</a>",
+	"pid" : "5177398c6c342fba03000003",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

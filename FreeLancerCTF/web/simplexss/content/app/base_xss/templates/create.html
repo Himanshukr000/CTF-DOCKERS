@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if success %}
+    <p>big ty. Will take a look&lt;p&gt;</p>
+
+{% endif %}
+  <form action="" method=post>
+    <p>{{message}}</p>
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+        {{ form.title.label }}
+        {{ form.title(class_="form-control") }}
+    </fieldset>
+    <fieldset class="form-group">
+        {{ form.content.label }}
+        {{ form.content(class_="form-control") }}
+    </fieldset>
+    {{ form.submit(class_="btn btn-primary") }}
+  </form>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{
+	"autogen" : true,
+	"basescore" : 70,
+	"displayname" : "Byte Code",
+	"generator" : "bytecode.py",
+	"grader" : "key",
+	"hint" : "You're probably going to want to use a decompiler for this, such as jd-gui",
+	"pid" : "5161de472f0686520c000008",
+	"threshold" : 1,
+	"weightmap" : {
+		"5161be6f2f0686520c000002" : 1,
+		"5161d7582f0686520c000006" : 1
+	}
+}

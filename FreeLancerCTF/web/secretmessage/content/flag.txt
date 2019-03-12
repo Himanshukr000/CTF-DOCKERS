@@ -1,0 +1,1 @@
+FCTF{that_some_janky_command_injection_you_managed_to_do}

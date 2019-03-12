@@ -1,0 +1,11 @@
+*.swp
+*.swo
+*.pyc
+*.pyo
+var/log/
+var/monitor.pid
+var/auth.db
+var/scoreboard.db
+var/cookie.secret
+venv/
+nohup.out

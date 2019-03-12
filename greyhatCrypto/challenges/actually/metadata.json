@@ -1,0 +1,9 @@
+{
+    "name": "actually",
+    "author": "Robert Grosse",
+    "description": "(It seems Robert was not satisified with one of my challenges... - Nick)",
+    "points": 600,
+    "flag": "Unlike some people, I actually make sure I can solve my challenges before releasing them.",
+
+    "public_files": ["actually.py", "encrypted.json", "knownpairs.json"]
+}

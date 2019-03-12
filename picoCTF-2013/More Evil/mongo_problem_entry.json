@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 200,
+	"desc" : "<p>This robot looks... particularly evil. It seems like it only accepts one key, and if you find it, the robot will do your bidding. Can you find the valid key, and gain control over the robot?</p><p>Download the binary <a href='/problems/moreevil' target='_blank'>here</a> or look on the shell machine in /problems/moreevil/</p>",
+	"displayname" : "More Evil",
+	"grader" : "phase4_moreevil.py",
+	"hint" : "Download IDA and stare at it for a few hours. It's a very difficult problem, and there aren't really any shortcuts... good luck",
+	"pid" : "5179eb80657debeb14000004",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  xmas_ctf:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: taku2
+    ports:
+      - "10009:31337"
+    entrypoint: /etc/chall_init.sh

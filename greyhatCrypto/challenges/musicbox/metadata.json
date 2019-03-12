@@ -1,0 +1,12 @@
+{
+    "name": "musicbox",
+    "author": "Robert Grosse",
+    "description": "",
+    "points": 300,
+    "flag": "Loud obnoxious music is essential to the CSAW experience",
+
+    "run_type": "tcpserver",
+	"run_command": "python musicbox.py %(host)s %(port)s",
+
+    "public_files": ["musicbox.py", "capture"]
+}

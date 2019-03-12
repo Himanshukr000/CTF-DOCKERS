@@ -1,0 +1,4 @@
+[submodule "lc3achi"]
+	path = lc3achi
+	url = git@github.com:emc2314/lc3achi.git
+	branch = master

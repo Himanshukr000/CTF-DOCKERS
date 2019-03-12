@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="full">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" 
+            type="text/css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/ctf.css') }}" 
+            type="text/css"/>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAEJCQgA/Pz8OFhYWJAAAAA4wMDAZFBQUHwMDAw8vLy8hLi4uCDo6OhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDQ0MAQEBABx0dHQ8AAAAgIiIiGw0NDTAJCQknKysrOAgICCAfHx8YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMzMwAwMDAcCwsLLAgICC8EBAQwEBAQLRkZGTAAAAAtAAAADAAAAAAAAAAAAAAAAAAAAAAyMjIfAAAAAgAAAAAAAAADAgICYwAAAJkAAACWAAAAlgAAAJcAAACXAAAAlAAAADYAAAAAFxcXACYmJgQ7OzsRExMTGwAAACAAAAAbAAAAYgUFBe0NDQ3/GBgY/w0NDf8NDQ3/CgoK/wgICP8DAwPLAAAAOgAAABkFBQUhJiYmHAAAABkBAQElAgICLAAAAJcGBgb/MDAw/z09Pf8rKyv/QEBA/ywsLP8LCwv/BQUF8QAAAGEjIyMsFRUVCwAAAAAdHR0pMDAwDCEhITEAAACWBgYG/zAwMP88PDz/Q0ND/1xcXP9UVFT/FxcX/wQEBPEAAABfBwcHJwEBAR8AAAAFPDw8HjMzMxgiIiIuAAAAlwcHB/8UFBT/JiYm/yQkJP8kJCT/JiYm/xISEv8EBATxAgICYRMTEykmJiYyKysrExUVFRsbGxtBAAAAKgAAAJYGBgb/Kioq/0VFRf9JSUn/NDQ0/0VFRf8oKCj/AwMD8QUFBWQkJCQkNDQ0Kzs7Ox8DAwMBCAgIDxoaGi0AAACXBgYG/zExMf8oKCj/RUVF/ycnJ/9PT0//NjY2/wICAvEAAABgAAAAJgkJCSYREREpAAAABwMDAxoTExMsAAAAkgYGBv8UFBT/EBAQ/yMjI/8mJib/Kioq/xQUFP8DAwPuAAAAXQAAACIAAAAPAAAABS0tLSMQEBAVAAAABwAAACsBAQG/AQEB7QEBAesAAADrAAAA6wAAAOsBAQHrAQEBjwAAABIWFhYbNDQ0GDExMQBCQkIFPj4+ATY2NgAAAAAAAAAANAAAAFkAAABXAAAAVwMDA1oFBQVbAAAAVgAAABYFBQUAPz8/AkJCQgRHR0cAAAAAAAAAAAAAAAAAAAAAAQAAAB4JCQknDQ0NMRYWFi8SEhIkHh4eIwAAACkAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgDAwMiLy8vGhkZGTQZGRkgAAAAFAQEBAoTExMvLi4uIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMjIyJD4+PhkvLy8iExMTKQAAAAY8PDwCOzs7HEFBQQgxMTEAAAAAAAAAAAAAAAAA4A8AAOAPAADwDwAAIAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAMAkAAOAPAADgDwAA4AcAAA==" rel="icon" type="image/x-icon" />
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}" type='text/javascript'></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type='text/javascript'></script>
+        <title>{{ lang.frame.title }}</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">{{ lang.frame.title }}</a>
+          </div>
+          {% if not login %}
+          <ul class="navbar-nav mr-auto"></ul>
+          <a class="btn btn-outline-light" href="/login" role="button">{{ lang.frame.login }}</a>
+          {% else %}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="{{ lang.frame.toggle }}">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto nav-pills">
+              <li class="nav-item {{ active.about }}"><a class="nav-link" href="/about">{{ lang.about.title }}</a></li>
+              <li class="nav-item {{ active.tasks }}"><a class="nav-link" href="/tasks">{{ lang.tasks.title }}</a></li>
+              <li class="nav-item {{ active.scoreboard }}"><a class="nav-link" href="/scoreboard">{{ lang.scoreboard.title }}</a></li>
+              <li class="nav-item {{ active.achivements }}"><a class="nav-link" href="/achivements">{{ lang.achivements.title }}</a></li>
+            </ul>
+            <span class="navbar-text">
+              {{ lang.frame.logged_in }} {{ user.username }} |
+              <a class="font-italic" href="/logout">{{ lang.frame.logout}}</a>
+            </span>
+          </div>
+          {% endif %}
+        </nav>
+        {% include page %}
+        <nav class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark" >
+          <ul class="navbar-nav mr-auto"></ul>
+          <span class="navbar-text">
+            {{ lang.frame.bottom }}
+          </span>
+        </nav>
+    </body>
+</html>

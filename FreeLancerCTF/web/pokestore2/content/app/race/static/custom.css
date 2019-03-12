@@ -1,0 +1,44 @@
+.user-state {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1em;
+}
+.card-deck-wrapper {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+}
+
+.card-deck {
+    border-spacing: 0.25em 0.25em;
+}
+
+.no-padding {
+    padding:0 !important;
+}
+
+#main-div {
+    padding-top: 1em;
+}
+
+.header-div {
+    position: relative;
+}
+
+.user-state {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1em;
+}
+
+.mokeball-img {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+}
+
+.force-half {
+    width:50% !important;
+}

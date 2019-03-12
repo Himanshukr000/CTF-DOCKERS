@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 190,
+	"desc" : "<p>Stack overflows are the most basic binary exploitation technique, but they take a lot of skill to master. If you already know some C, these problems can help acquaint you with stacks and binary exploitation in general.</p><p>Problem available on the shell machine in <code>/problems/stack_overflow_5_0353c1a83cb2fa0d</code> , downloadable <a href='/problems/overflow5-0353c1a83cb2fa0d'>here</a>. Source is not available for this problem.</p><p>If you solve the problem you will be able to read the key file by running <blockquote><code>cat /problems/stack_overflow_5_0353c1a83cb2fa0d/key</code></blockquote> on the PicoCTF shell machine.</p>",
+	"displayname" : "Overflow 5",
+	"grader" : "phase4_overflow5.py",
+	"hint" : "Now you don't have source, and you aren't allowed to execute code on the stack.  Keep calm and objdump -d",
+	"pid" : "5175a8f356dce84c7d00000a",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

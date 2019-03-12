@@ -1,0 +1,10 @@
+version: '3'
+services:
+  xmas_ctf:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: wasm
+    ports:
+      - "10001:1337"
+    entrypoint: /etc/chall_init.sh

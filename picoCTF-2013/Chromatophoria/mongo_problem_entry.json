@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 100,
+	"desc" : "<p>While refueling at a gas giant, you are hailed by a race of cuttlefish-people who dwell within it.  <a href='/problems/steg.png'>Their transmission</a> is entirely visual; you suspect that they may be communicating through the color values.</p>",
+	"displayname" : "Chromatophoria",
+	"grader" : "stego_grader.py",
+	"hint" : "You may find <a href='http://www.garykessler.net/library/steganography.html' target='_blank'>this</a> useful.",
+	"pid" : "516ae8982f0686520c000019",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

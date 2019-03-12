@@ -1,0 +1,41 @@
+1dt6SE89dNEOnAdBzxtNllxgfH3VJCyJRWm9tDnanQJMk
+	if (strncmp(input, "North", 5) == 0)
+	{
+		printf("You head North, towards the mammoth mountains.\n");
+		char string[20];
+		char answer[20];
+		char given[20];
+		fgets(string, sizeof(string), stdin);
+		strcpy(given, "wasteland");
+		printf("%s\n", given);
+		fgets(answer, sizeof(answer), stdin);
+		strcat(string, given);
+		int str_len = strlen(string);
+		int user_size = atoi(answer);
+		if (str_len == user_size)
+		{
+			char final_prompt[20];
+			int final_int;
+			char final_answer[20];
+			fgets(final_prompt, sizeof(final_prompt), stdin);
+			final_int = atoi(final_prompt);
+			final_int = final_int >> 2;
+			final_int = final_int << 4;
+			final_int = final_int >> 1;
+			final_int = final_int << 4;
+			final_int = final_int >> 4;
+			final_int = final_int << 9;
+			final_int = final_int >> 5;
+			final_int = final_int << 4;
+			final_int = final_int >> 3;
+			final_int = final_int << 2;
+			fgets(final_answer, sizeof(final_answer), stdin);
+			int last_piece = atoi(final_answer);
+			if (final_int == last_piece)
+			{
+				piece = fopen("1", "r");
+				pathfinding(piece);
+			}
+			
+		}	
+	}

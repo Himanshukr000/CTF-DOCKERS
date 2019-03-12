@@ -1,0 +1,5 @@
+datadir/*
+!datadir/.gitkeep
+botnet/public/uploads/*
+!botnet/public/uploads/.gitkeep
+httpbots/node_modules/

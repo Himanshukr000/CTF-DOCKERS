@@ -1,0 +1,42 @@
+{% extends "base_race.html" %}{% if somethingwrong %} {{ somethingwrong }} {% endif %} {% block content %}
+    <div class="card-deck-wrapper">
+            <div class="card-columns">
+                {% for product in products_list %}
+                <!--  <div class="col-sm-3 no-padding"> -->
+                <div class="card productbox">
+                    {% if product.img %}
+                    <img class="card-img-top mokeball-img" alt="{{ product.name }}" data-src="{{ product.img }}" src="{{ product.img }}"/>
+                    {% endif %} 
+                    <div class="card-block">
+                        {% if product.name %}
+                        <h4 class="card-title">{{ product.name }}</h4>
+                        {% endif %}
+                        <p class="card-text">
+                        {% if product.price %}
+                            <span class="price-sym card-text"><img src="{{url_for('race.static', filename='poke.png') }}"/></span>
+                            <span class="price card-text">{{ product.price }}</span>
+                        {% endif %}
+                        </p>
+                        <p class="card-text">
+                        {% if product.desc %}{{ product.desc }}{% endif %}
+                        <form action="" method=post>
+                            <fieldset >
+                                {{ form.item_id(value=product.id) }}
+                                <div>
+                                    <label class="sr-only" for="exampleInputAmount">Quantity</label>
+                                    <div class="input-group">
+                                        {{ form.quantity(class_="force-half col-xs-6 form-control", placeholder="Quantity") }}
+                                        {{ form.submit(class_="force-half col-xs-6 input-group-addon btn btn-primary") }}
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        </p>
+                    </div>
+                </div>
+                <!-- </div> -->
+                {% endfor %}
+            </div>
+    </div>
+
+{% endblock %}

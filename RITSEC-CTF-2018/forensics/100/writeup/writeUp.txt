@@ -1,0 +1,15 @@
+Created By: oneNutW0nder
+
+Challenge Name: Notes
+Points:	100
+
+Solution:
+
+	The flag is hidden in an alternate data stream in the file "ctfNotes.txt".
+	Refere to the "solution.png" image for the commands necessary to find the
+	data stream, then access it. It would be helpful to read up on how NTFS
+	allows you to do this for the challenge to make more sense. 
+
+	In addition, the youtube video will link you to a rendition of
+	"Row Row Row Your Boat" which should point you toward file streams
+	because of the song. 
