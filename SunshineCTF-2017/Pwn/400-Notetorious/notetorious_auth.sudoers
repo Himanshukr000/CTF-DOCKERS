@@ -1,0 +1,5 @@
+# Allow notetorious_auth user to run sudo without a terminal
+Defaults:notetorious_auth !requiretty
+
+# notetorious_auth is only allowed to run notetorious.py as user "notetorious"
+notetorious_auth ALL=(notetorious) NOPASSWD: /notetorious/notetorious.py

@@ -1,0 +1,21 @@
+version: "3"
+services:
+
+  webserver:
+    image: webdevops/php-apache-dev
+    restart: always
+    volumes:
+      - ./app:/var/www/html/
+    ports:
+      - "8000:80"
+    environment:
+      WEB_DOCUMENT_ROOT: /var/www/html/
+
+
+  database:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 5iS2kIYF95jQ9aoJtMQT6EPN6WzprC
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql

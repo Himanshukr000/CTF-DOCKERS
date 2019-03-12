@@ -1,0 +1,16 @@
+{
+	"autogen" : false,
+	"basescore" : 50,
+	"desc" : "<p>There's bound to be a key on the spaceport's <a href='/problems/getkey/getkey.php' target='_blank'>hidden website</a></p>",
+	"displayname" : "GETKey",
+	"grader" : "getquery.py",
+	"hint" : "Look very closely at the url and think about it a little",
+	"pid" : "5161eae22f0686520c00000d",
+	"threshold" : 2,
+	"weightmap" : {
+		"5161fa8a2f0686520c00000e" : 1,
+		"5161e8102f0686520c00000b" : 1,
+		"5161c04a2f0686520c000003" : 1,
+		"5161cca02f0686520c000004" : 1
+	}
+}

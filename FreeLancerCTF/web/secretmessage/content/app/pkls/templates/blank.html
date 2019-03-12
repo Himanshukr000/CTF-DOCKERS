@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form id="secret" action="" method="POST" class="form" role="form">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-6">
+                <label class="control-label">guess the secret key!</label>
+            </div>
+        </div>
+    </div>
+    {{ form.secret_key(class_="form-control") }}
+    {{ form.submit(class_="btn btn-primary") }}
+</form>
+{% endblock %}
+

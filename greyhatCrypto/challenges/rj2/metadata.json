@@ -1,0 +1,15 @@
+{
+    "name": "rj2",
+	"author": "Nick Johnson",
+    "description": "(You should complete rj1 before attempting this challenge! Also see actually.)\n\nThe government of Eastasia has discovered our ability to break their original block cipher design, and decided to beef up security with advanced 'nontrivial diffusion'.\n\nSend data to the server over UDP in binary form. Every 8-byte block of the payload will be run through the block cipher and returned (max 1024 bytes). Please do not send too much traffic. We must be discreet.\n\nReport back with the key as a lower-case hexadecimal string.",
+
+	"points": 1000,
+	"flag": "487d42bd96333b67",
+
+	"public_files": [
+		"rj2.py"
+	],
+
+	"run_type": "udpserver",
+	"run_command": "python server.py %(host)s %(port)s"
+}

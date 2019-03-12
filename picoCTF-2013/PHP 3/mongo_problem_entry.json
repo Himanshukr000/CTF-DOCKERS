@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 120,
+	"desc" : "<p>It looks like <a href='http://picoctf.com/problems/php3/' target='_blank'>this site</a> uses MD5 to hash passwords, but I don't think they're doing it quite right... </p>",
+	"displayname" : "PHP 3",
+	"grader" : "phase4_php3.py",
+	"hint" : "Look at the PHP md5 function. What does it do when the second argument is True, and how can you make use of that?",
+	"pid" : "5179dcc0657debeb14000002",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

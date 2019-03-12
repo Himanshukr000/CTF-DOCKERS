@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 95,
+	"desc" : "<p>It is recommended that you complete Python Eval 1 before trying <a target='_blank' href='/problems/pyeval/stage2.html'>Python Eval 2</a>.</p>",
+	"displayname" : "Python Eval 2",
+	"grader" : "phase4_pyeval2.py",
+	"hint" : "What expression can you make the program eval that will tell you the key?",
+	"pid" : "51743245054c91c14b000005",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

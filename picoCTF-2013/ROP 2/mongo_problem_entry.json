@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 120,
+	"desc" : "<p>ROP is a classic technique for getting around address randomization and non-executable memory. This sequence will teach you the basics.</p><p>Problem available on the shell machine in <code>/problems/ROP_2_20f65dd0bcbe267d</code> , downloadable <a href='/problems/rop2-20f65dd0bcbe267d'>here</a> with source <a href='/problems/rop2-20f65dd0bcbe267d.c'>here</a>.</p><p>If you solve the problem you will be able to read the key file by running <blockquote><code>cat /problems/ROP_2_20f65dd0bcbe267d/key</code></blockquote> on the PicoCTF shell machine</p>",
+	"displayname" : "ROP 2",
+	"grader" : "phase4_rop2.py",
+	"hint" : "objdump -t can get you the address in memory of the string /bin/bash...  and then you need to figure out how to pass it as an argument to a call to system somehow",
+	"pid" : "5175a39356dce84c7d000003",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

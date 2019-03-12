@@ -1,0 +1,14 @@
+<p><html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python eval</title>
+<link rel="stylesheet" type="text/css" href="codehilite.css" media="screen" />
+</head>
+<body></p>
+<h2>Part 4</h2>
+<h3>Task 4</h3>
+<p>Now that you've learned the basics, it's time to let you loose on something that's not as much of a toy example.</p>
+<p>We are running a Python web server that uses <code>eval</code> to extract values from a <a href="http://en.wikipedia.org/wiki/Query_string">query string</a>. It's possible to exploit this server by sending it a maliciously crafted URL request. However, since you aren't given direct access to an <code>eval</code> call, you may have to fool around a bit before you can get <code>eval</code> to run on the right string.</p>
+<p>The web server is running at python.picoctf.com:6364; you can navigate to <a href="http://python.picoctf.com:6364/index.html">http://python.picoctf.com:6364/index.html</a> to see it in action and download its source. You'll probably want to know a bit about the <a href="http://en.wikipedia.org/wiki/HTTP_protocol">HTTP protocol</a> and connect with <code>nc python.picoctf.com 6364</code> to actually exploit it. As with task 3, your goal is to get a shell and read out a file with the flag in it.</p>
+<p></body>
+</html></p>

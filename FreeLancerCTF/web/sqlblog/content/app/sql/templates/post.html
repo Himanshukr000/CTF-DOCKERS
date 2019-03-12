@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% autoescape false %}
+        {% for post in post_list %}
+            <h4>{{ post.title }}    </h4>
+            {{ post.content }}
+            <div style='display:none;'> {{ post.hidden }} </div>
+        {% endfor %}
+    {% endautoescape %}
+{% endblock %}

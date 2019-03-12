@@ -1,0 +1,59 @@
+{% extends "wrapper.html" %}
+{% block title %}Welcome{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper">
+
+	<div class="title-container">
+		<h1 class="title">FaceSafe</h1>
+		<h2 class="subtitle">The world's most elegant authentication platform</h2>
+	</div>
+
+	<div class="info-container">
+
+		<p>FaceSafe (BETA) is a secret-keeping platform that uses state-of-the-art AI to authenticate you. FaceSafe lets you store text secrets and gain access to them just based off of your picture!</p>
+
+		<p>Current users of FaceSafe (bold indicates VIP user):</p>
+		<ul>
+			<li>Mr. Airplane</li>
+			<li>Ms. Automobile</li>
+			<li>Ms. Bird</li>
+			<li>Mr. Cat</li>
+			<li><strong>Mr. Deer [VIP]</strong></li>
+			<li>Mr. Dog</li>
+			<li>Mr. Frog</li>
+			<li>Mrs. Horse</li>
+			<li>Mrs. Ship</li>
+			<li>Ms. Truck</li>
+		</ul>
+
+		<p>Support for more users will be added soon!</p>
+
+	</div>
+
+	<div class="info-prompt">
+
+		<p>Current users: In order to gain access to your secret text, just upload a photo of yourself:</p>
+		<input id="image-upload" type="file" accept="image/*"/>
+
+	</div>
+
+	<div class="secret-display">
+
+		<div id="authenticated-secret" style="visibility: hidden;">
+			<p id="greeting"></p>
+			<p>Here is the secret you stored:</p>
+			<p id="secret"></p>
+		</div>
+	</div>
+</div>
+
+<!-- TODO: cleanup metadata txt (robots, humans, etc) -->
+
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/send.js') }}"></script>
+{% endblock %}

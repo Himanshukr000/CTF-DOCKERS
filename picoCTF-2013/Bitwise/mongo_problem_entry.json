@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 55,
+	"desc" : "<p> You see the doors to the loading bay of the hangar, but they are locked. However, you are able to extract the password verification program from the control panel... Can you find the password to gain access to the loading bay? </p>\n<p> Available in <a href=/problems/bitwise.py>Python</a> or <a href=/problems/bitwise.java>Java</a> </p>",
+	"displayname" : "Bitwise",
+	"grader" : "bitwise.py",
+	"hint" : "Have a look at <a href='https://en.wikipedia.org/wiki/Bitwise_operation#Bitwise_operators' target='_blank'>this</a> for some good truth tables for bitops",
+	"pid" : "5161d7582f0686520c000006",
+	"threshold" : 1,
+	"weightmap" : {
+		"5161d2a92f0686520c000005" : 1,
+		"5161eae22f0686520c00000d" : 1
+	}
+}

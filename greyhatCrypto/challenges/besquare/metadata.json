@@ -1,0 +1,12 @@
+{
+    "name": "besquare",
+    "author": "Robert Grosse (code adapated from challenge by Ben Agre)",
+    "description": "Although the code is similar to the CSAW challenge, the attack required is completely different...",
+    "points": 500,
+    "flag": "Should have checked for primality",
+
+    "run_type": "tcpserver",
+	"run_command": "python besquare.py %(host)s %(port)s",
+
+    "public_files": ["besquare.py"]
+}

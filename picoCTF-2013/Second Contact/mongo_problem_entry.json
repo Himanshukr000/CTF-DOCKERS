@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 85,
+	"desc" : "<p>As you're bumming around the Kuiper Belt, you catch an <a href='/problems/kuiper.pcap'>incoming transmission</a> from a distant source.  They seem to be scanning the area, looking for something...  Maybe you should try to find it first.</p><p>This trace file is also available in cloudshark <a href='http://www.cloudshark.org/captures/f0741cdfee53' target='_blank'>here</a></p>",
+	"displayname" : "Second Contact",
+	"grader" : "wireshark_search_grader.py",
+	"hint" : "Look for packets going to and from a search engine, and the key is the name of the author of the thing they're looking for",
+	"pid" : "516af3b22f0686520c00001a",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

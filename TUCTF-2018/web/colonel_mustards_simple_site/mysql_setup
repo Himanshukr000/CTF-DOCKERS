@@ -1,0 +1,4 @@
+CREATE DATABASE challenge;
+CREATE TABLE users (user VARCHAR(20) NOT NULL, password VARCHAR(50) NOT NULL);
+INSERT INTO users VALUES ('this is a test username', 'this is a test password');
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'change the root password to something new';

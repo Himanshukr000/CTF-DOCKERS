@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <title>Grey Hat Crypto CTF 2014 - {% block title %}{% end %}</title>
+  </head>
+  <body>
+    <div id="userheader" class="center">
+      {% if not user %}
+        <div class="float-right"></div>
+        <div class="float-right" onclick="window.location='/login'">
+          Log In
+        </div>
+        <div class="float-right">|</div>
+        <div class="float-right" onclick="window.location='/create_user'">
+          Create User
+        </div>
+      {% else %}
+        <div class="float-right"></div>
+        <div class="float-right">
+          User: {{ user }}
+        </div>
+        <div class="float-right">|</div>
+        <div class="float-right">
+          <form action="/logout" method="post"><input type="submit" value="Log Out"></form>
+        </div>
+      {% end %}
+    </div>
+
+    <div id="header" class="center">
+	  <div style="padding:5px;padding-left:120px">
+	    <img src="/static/logo.png"><br>
+	    Visit us at <a href="https://greyhat.gatech.edu">https://greyhat.gatech.edu/</a>
+      </div>
+      {% block header %}{% end %}
+    </div>
+
+    <div id="navbar" class="center">
+      <div onclick="window.location='/challenges'"
+       class="navitem challenges {{ 'selected' if selected == 'challenges' else '' }}">
+        Challenges
+      </div>
+      <div onclick="window.location='/scoreboard'"
+       class="navitem scoreboard {{ 'selected' if selected == 'scoreboard' else '' }}">
+        Scoreboard
+      </div>
+    </div>
+
+    <div id="content" class="center">
+      {% block content %}{% end %}
+    </div>
+
+    {% block extra_js %}{% end %}
+  </body>
+</html>

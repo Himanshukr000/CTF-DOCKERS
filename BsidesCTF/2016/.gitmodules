@@ -1,0 +1,3 @@
+[submodule "binary/trashtalker"]
+	path = binary/trashtalker
+	url = https://github.com/justinsteven/trashtalker.git

@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 100,
+	"desc" : "<p>A simple introduction to the format string family of vulnerabilities. These let you read and write memory in fantastic ways.</p><p>Problem can be found in <blockquote><code>/problems/format_1_d407f39cdf584627</code></blockquote> on the shell machine, binary downloadable <a href='/problems/format1'>here</a> source <a href='/problems/format1.c'>here</a>.</p>",
+	"displayname" : "Format 1",
+	"grader" : "format1.py",
+	"hint" : "You should read up on <a href='http://www.infond.fr/2010/07/tutorial-exploitation-format-string.html' target='_blank'>format string vulnerabilities</a>.  Also feel free to ask us for help!",
+	"pid" : "517464b7054c91c14b000010",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

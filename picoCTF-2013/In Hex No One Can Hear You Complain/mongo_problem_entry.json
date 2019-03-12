@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 90,
+	"desc" : "<p>While flying through the outskirts of the Ripley system, you notice a distress signal from one of the outer moons.  It appears a ship has crash-landed near a 16-sided pyramid.  The lone survivor, a <a href='/problems/kane.docx'>docx file</a>, tells you that a malicious programmer has embedded an egg in his chest and he's afraid that it's going to hatch.  He offers his assistance if you can help find the egg.</p>",
+	"displayname" : "In Hex, No One Can Hear You Complain",
+	"grader" : "docx_grader.py",
+	"hint" : "You should look at the first two bytes of the docx file, and then think about them a little bit...",
+	"pid" : "516ad71b2f0686520c000012",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

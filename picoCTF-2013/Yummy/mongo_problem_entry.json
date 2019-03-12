@@ -1,0 +1,17 @@
+{
+	"autogen" : false,
+	"basescore" : 60,
+	"desc" : "<p>You want to find out the docking bay numbers for space ships that are ready to launch. Luckily for you, <a href=\"/problems/yummy/yummy.php\" target='_blank'>the website</a> for the docking bay ship status page doesn't seem so secure....</p><p>Enter the docking bay for any of the ships that are awaiting launch.</p>",
+	"devnotes" : "Level 2 problem, should depend on 2 of 4 level 1 problems.",
+	"displayname" : "Yummy",
+	"grader" : "yummy.py",
+	"hint" : "You know what's yummy?  <a href='http://en.wikipedia.org/wiki/HTTP_cookie' target='_blank'>Cookies</a> are yummy.",
+	"pid" : "516a186c2f0686520c000010",
+	"threshold" : 2,
+	"weightmap" : {
+		"5161cca02f0686520c000004" : 1,
+		"5161c04a2f0686520c000003" : 1,
+		"5161e8102f0686520c00000b" : 1,
+		"5161fa8a2f0686520c00000e" : 1
+	}
+}

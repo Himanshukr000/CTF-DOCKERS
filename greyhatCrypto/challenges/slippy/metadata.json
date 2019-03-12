@@ -1,0 +1,15 @@
+{
+    "name": "slippy",
+	"author": "Nick Johnson",
+	"description": "",
+
+	"points": 400,
+	"flag": "965a27ba7328b453",
+
+	"public_files": [
+		"rj1.py"
+	],
+
+	"run_type": "udpserver",
+	"run_command": "python server.py %(host)s %(port)s"
+}

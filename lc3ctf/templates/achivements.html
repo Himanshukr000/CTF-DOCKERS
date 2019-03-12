@@ -1,0 +1,65 @@
+<div class="landing-page container">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: {{ width }}%;" >{{ width }}%</div>
+  </div>
+  <div style="background:white"><h1>Accomplished common achivements <span class="badge badge-secondary">{{ lACh }}</span></h1></div>
+  <div class="accordion" id="accordion">
+    {% for a in ACh %}
+    <div class="card">
+      <div class="card-header" id="heading{{ a.id }}">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ a.id }}" aria-expanded="false" aria-controls="collapse{{ a.id }}">
+            {{ a.title }}
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapse{{ a.id }}" class="collapse show" aria-labelledby="heading{{ a.id }}" data-parent="#accordion">
+        <div class="card-body">
+            {{ a.desc }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div style="background:white"><h1>Locked common achivements <span class="badge badge-secondary">{{ lach }}</span></h1></div>
+  <div class="accordion" id="accordion">
+    {% for a in ach %}
+    <div class="card">
+      <div class="card-header" id="heading{{ a.id }}">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ a.id }}" aria-expanded="false" aria-controls="collapse{{ a.id }}">
+            {{ a.title }}
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapse{{ a.id }}" class="collapse show" aria-labelledby="heading{{ a.id }}" data-parent="#accordion">
+        <div class="card-body">
+            {{ a.desc }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div style="background:white"><h1>Hidden achivements <span class="badge badge-secondary">{{ lACH }}/{{ l__H }}</span></h1></div>
+  <div class="accordion" id="accordion">
+    {% for a in ACH %}
+    <div class="card">
+      <div class="card-header" id="heading{{ a.id }}">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ a.id }}" aria-expanded="false" aria-controls="collapse{{ a.id }}">
+            {{ a.title }}
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapse{{ a.id }}" class="collapse show" aria-labelledby="heading{{ a.id }}" data-parent="#accordion">
+        <div class="card-body">
+            {{ a.desc }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

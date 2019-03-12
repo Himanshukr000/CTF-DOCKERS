@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 70,
+	"desc" : "<p>Wouldn't it be cool to be able to have one of these patrol drones to do your bidding?! Figure out the correct sequence of C functions from the following <a href='/problems/cfg2c/' target='_blank'>control flow graphs</a> and you should be well on your way.</p><p><i>Submit the correct order of functions.</i></p>",
+	"displayname" : "CFG to C",
+	"grader" : "cfg_to_c.py",
+	"pid" : "5161e3b62f0686520c00000a",
+	"threshold" : 2,
+	"weightmap" : {
+		"5161fa8a2f0686520c00000e" : 1,
+		"5161e8102f0686520c00000b" : 1,
+		"5161c04a2f0686520c000003" : 1,
+		"5161cca02f0686520c000004" : 1
+	}
+}

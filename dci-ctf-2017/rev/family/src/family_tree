@@ -1,0 +1,93 @@
+./builder 1
+./builder 2
+./builder 3 1 2
+./builder 4
+./builder 5 1 2
+./builder 6
+./builder 7 3 4
+./builder 8
+./builder 9 3 4
+./builder 10
+./builder 11 5 6
+./builder 12
+./builder 13 7 8
+./builder 14
+./builder 15 7 8
+./builder 16
+./builder 17 9 10
+./builder 18
+./builder 19 11 12
+./builder 20
+./builder 21 13 14
+./builder 22
+./builder 23 13 14
+./builder 24
+./builder 25 15 16
+./builder 26
+./builder 27 17 18
+./builder 28
+./builder 29 19 20
+./builder 30
+./builder 31 21 22
+./builder 32
+./builder 33 23 24
+./builder 34
+./builder 35 25 26
+./builder 36
+./builder 37 27 28
+./builder 38
+./builder 39 29 30
+./builder 40
+./builder 41 31 32
+./builder 42 33 34
+./builder 43 35 36
+./builder 44 37 38
+./builder 45 39 40
+
+g++ -c -std=c++0x cpp/Roxana.cpp -o cpp/Roxana.o
+g++ -c -std=c++0x cpp/Silvana.cpp -o cpp/Silvana.o
+g++ -c -std=c++0x cpp/Kathryn.cpp -o cpp/Kathryn.o
+g++ -c -std=c++0x cpp/Wilburn.cpp -o cpp/Wilburn.o
+g++ -c -std=c++0x cpp/Clement.cpp -o cpp/Clement.o
+g++ -c -std=c++0x cpp/Abraham.cpp -o cpp/Abraham.o
+g++ -c -std=c++0x cpp/Maybell.cpp -o cpp/Maybell.o
+g++ -c -std=c++0x cpp/Cory.cpp -o cpp/Cory.o
+g++ -c -std=c++0x cpp/Aleshia.cpp -o cpp/Aleshia.o
+g++ -c -std=c++0x cpp/Myriam.cpp -o cpp/Myriam.o
+g++ -c -std=c++0x cpp/Daisey.cpp -o cpp/Daisey.o
+g++ -c -std=c++0x cpp/Antonetta.cpp -o cpp/Antonetta.o
+g++ -c -std=c++0x cpp/Hermina.cpp -o cpp/Hermina.o
+g++ -c -std=c++0x cpp/Kathey.cpp -o cpp/Kathey.o
+g++ -c -std=c++0x cpp/Yolonda.cpp -o cpp/Yolonda.o
+g++ -c -std=c++0x cpp/Waneta.cpp -o cpp/Waneta.o
+g++ -c -std=c++0x cpp/Raleigh.cpp -o cpp/Raleigh.o
+g++ -c -std=c++0x cpp/Sherrie.cpp -o cpp/Sherrie.o
+g++ -c -std=c++0x cpp/Donnie.cpp -o cpp/Donnie.o
+g++ -c -std=c++0x cpp/Darci.cpp -o cpp/Darci.o
+g++ -c -std=c++0x cpp/Hugh.cpp -o cpp/Hugh.o
+g++ -c -std=c++0x cpp/Sherwood.cpp -o cpp/Sherwood.o
+g++ -c -std=c++0x cpp/Parker.cpp -o cpp/Parker.o
+g++ -c -std=c++0x cpp/Jeremy.cpp -o cpp/Jeremy.o
+g++ -c -std=c++0x cpp/Burl.cpp -o cpp/Burl.o
+g++ -c -std=c++0x cpp/Rudolf.cpp -o cpp/Rudolf.o
+g++ -c -std=c++0x cpp/Antony.cpp -o cpp/Antony.o
+g++ -c -std=c++0x cpp/Faustino.cpp -o cpp/Faustino.o
+g++ -c -std=c++0x cpp/Delora.cpp -o cpp/Delora.o
+g++ -c -std=c++0x cpp/Rolf.cpp -o cpp/Rolf.o
+g++ -c -std=c++0x cpp/Piper.cpp -o cpp/Piper.o
+g++ -c -std=c++0x cpp/Arletta.cpp -o cpp/Arletta.o
+g++ -c -std=c++0x cpp/Manuel.cpp -o cpp/Manuel.o
+g++ -c -std=c++0x cpp/Ryan.cpp -o cpp/Ryan.o
+g++ -c -std=c++0x cpp/Addie.cpp -o cpp/Addie.o
+g++ -c -std=c++0x cpp/Elvie.cpp -o cpp/Elvie.o
+g++ -c -std=c++0x cpp/Loren.cpp -o cpp/Loren.o
+g++ -c -std=c++0x cpp/main.cpp -o cpp/main.o
+g++ -c -std=c++0x cpp/Janett.cpp -o cpp/Janett.o
+g++ -c -std=c++0x cpp/Nellie.cpp -o cpp/Nellie.o
+g++ -c -std=c++0x cpp/Levi.cpp -o cpp/Levi.o
+g++ -c -std=c++0x cpp/Gordon.cpp -o cpp/Gordon.o
+g++ -c -std=c++0x cpp/Oscar.cpp -o cpp/Oscar.o
+g++ -c -std=c++0x cpp/builder.cpp -o cpp/builder.o
+g++ -c -std=c++0x cpp/Lourie.cpp -o cpp/Lourie.o
+g++ -c -std=c++0x cpp/Oswaldo.cpp -o cpp/Oswaldo.o
+g++ -c -std=c++0x cpp/Gavin.cpp -o cpp/Gavin.o

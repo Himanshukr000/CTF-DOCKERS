@@ -1,0 +1,17 @@
+<h2>Trips</h2>
+
+<% if @flag %>
+<p><%= @flag %></p>
+<% end %>
+
+<div class="trips">
+<% @trips.each do |(user, place, date)| %>
+  <div class="trip">
+    <h3>Trip to <%= place %></h3>
+    <p>
+    Name of passenger: <%= user %><br/>
+    Date of departure: <%= date %>
+    </p>
+  </div>
+<% end %>
+</div>

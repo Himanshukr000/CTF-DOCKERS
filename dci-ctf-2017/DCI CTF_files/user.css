@@ -1,0 +1,191 @@
+.solved-challenge {
+  opacity: 0.2;
+}
+
+.navbar-inverse, .jumbotron {
+    background-color: #12356B;
+}
+
+button.challenge-button, button.challenge-button.trigger {
+    background-color: #f9f9f9!important;
+    color: #333;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5; 
+}
+
+.lead {
+    font-size: 130%;
+}
+
+
+.navbar-brand {
+    background: url('https://dciets.com/img/logo_dci_white_red.png') no-repeat left center;
+    background-size: 25px auto; 
+    padding-left: 35px;
+}
+
+
+.index-container {
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.index-container section:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.index-container section:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.index-container section { 
+    padding: 28px; 
+    background-color: #f0f0f0; 
+}
+
+.index-container section.alternate-section {
+    background: #e42929; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #e42929 0%, #c52727 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #e42929 0%,#c52727 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #e42929 0%,#c52727 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e42929', endColorstr='#c52727',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    color: #FFFFFF
+}
+
+.index-container section.alternate-section.alternate-color {
+    background: #15487f; /* Old browsers */
+    background: -moz-linear-gradient(top, #15487f 0%, #12356b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #15487f 0%,#12356b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #15487f 0%,#12356b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15487f', endColorstr='#12356b',GradientType=0 ); /* IE6-9 */
+}
+
+.index-container section.alternate-section.no-color  {
+    background: black; 
+}
+
+
+
+
+
+.index-container section.alternate-section a,
+.index-container section.alternate-section a:active,
+.index-container section.alternate-section a:visited,
+.index-container section.alternate-section a:hover  {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.index-container section.alternate-section a:hover {
+    text-decoration: none; 
+}
+
+.partners a {
+    margin-left: 15px;
+    opacity: 0.7;
+    transition: opacity 0.5s linear;
+}
+
+.partners a:hover {
+    opacity: 1;
+
+}
+
+.partners img {
+    width: auto;
+    height: auto;
+    max-height: 80px;
+    max-width: 140px;
+    vertical-align: middle;
+}
+
+.dates em {
+    font-style: normal;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px black;
+    border: 1px solid #ed2d2d;
+    margin: 5px 2px;
+    text-shadow: 2px 2px 2px black;
+}
+
+a.home-button:link, a.home-button:visited, a.home-button:active, a.home-button:hover {
+    text-decoration: none!important;
+    text-transform: uppercase;
+    color: #FFF!important;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 2px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px black;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.5s ease; 
+}
+
+a.home-button:hover, a.home-button:active {
+        background-color: rgba(0,0,0,0.7);
+}
+
+a.home-button:active {
+    box-shadow: inset 0 2px 3px black;
+}
+
+#a-vous .row {
+    padding-top: 10px; 
+}
+
+
+.dci-logo {
+  height: 220px;
+  width: auto; 
+  margin: 0 30px;
+}
+
+.social a{
+    text-indent: -9999px;
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+}
+
+a.facebook {
+    background-image:url('https://dciets.com/img/facebook.png');
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a.twitter {
+    background-image:url('https://dciets.com/img/twitter.png');
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a.youtube {
+    background-image:url('https://dciets.com/img/youtube.png');
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a.github {
+    background-image:url('https://dciets.com/img/github.png');
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a.googleplus {
+    background-image:url('https://dciets.com/img/googleplus.png');
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

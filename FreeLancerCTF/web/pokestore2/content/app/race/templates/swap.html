@@ -1,0 +1,18 @@
+{% extends "base_race.html" %}
+
+{% block content %}
+
+{% if success %}
+    <p>big ty. Will take a look&lt;p&gt;</p>
+
+{% endif %}
+  <form action="" method=post>
+    <p>{{message}}</p>
+    <fieldset class="form-group">
+        {{ form.quantity(class_="form-control", placeholder="Quantity") }}
+    </fieldset>
+    {{ form.poke(class_="btn btn-primary") }}
+    {{ form.real(class_="btn btn-primary") }}
+  </form>
+{% endblock %}
+

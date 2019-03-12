@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Captcha: {{count}} / ????? </h1>
+  <form action="" method=post>
+      <img src="data:image/png;base64,{{ image }}" class="{{oopsie}}"/>
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+        {{ form.secret.label }}
+        {{ form.secret(class_="form-control") }}
+    </fieldset>
+    {{ form.submit(class_="btn btn-primary") }}
+  </form>
+{{secret}}
+{% endblock %}
+

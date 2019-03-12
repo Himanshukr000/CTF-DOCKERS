@@ -1,0 +1,41 @@
+zSF2CKSKSTSkZDvTSkZDvheYsdA9ue
+	if (strncmp(input, "East", 4) == 0)
+	{
+		printf("You head East, to the Great Warlands.\n");
+		char xbuf0[20];
+		char xbuf1[20];
+		char xbuf2[20];
+		char xbuf4[20];
+		fgets(xbuf0, sizeof(xbuf0), stdin);
+		fgets(xbuf1, sizeof(xbuf1), stdin);
+		fgets(xbuf2, sizeof(xbuf2), stdin);
+		int xint0 = atoi(xbuf2);
+		int xint1 = 0xdead;
+		int product;
+		product = xint0 ^ xint1;
+		if (product == 50)
+		{
+			int final_x;
+			int xint2 = 0x0;
+			int xint3 = 0xffffffff;
+			int xint4;
+			xint3 = xint1 | xint0;
+			xint0 = xint2 | xint0;
+			xint4 = xint3 | xint1;
+			xint2 = xint4 | xint0;
+			xint1 = xint3 | xint2;
+			xint0 = xint3 & xint2;
+			xint1 = xint0 & xint4;
+			xint2 = xint1 ^ xint3;
+			xint3 = xint0 ^ xint2;
+			xint4 = xint4 ^ xint2; 
+			fgets(xbuf4, sizeof(xbuf4), stdin);
+			final_x = atoi(xbuf4);
+			if (xint4 == final_x)
+			{
+				piece = fopen("2", "r");
+				pathfinding(piece);
+			}
+		}
+	}
+	}

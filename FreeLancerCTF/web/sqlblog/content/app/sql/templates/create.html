@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if success %}
+    <p>this is going straight to the front page</p>
+
+{% endif %}
+  <form action="" method=post>
+    <p>{{message}}</p>
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+        {{ form.title.label }}
+        {{ form.title(class_="form-control") }}
+    </fieldset>
+    <fieldset class="form-group">
+        {{ form.content.label }}
+        {{ form.content(class_="form-control") }}
+    </fieldset>
+    <div style="display:none;">
+         {{ form.hidden }}
+    </div>
+    {{ form.submit(class_="btn btn-primary") }}
+  </form>
+{% endblock %}
+

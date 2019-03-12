@@ -1,0 +1,4 @@
+Hello. Krampus congratulates you for successfully finishing his challenge.
+He'd now like to play a game. Inside this folder, you will find Krampus' favourite game. Start up the server, and join Krampus in his game.
+
+(For an optimal game experience, run the server with around 80MB of memory.)

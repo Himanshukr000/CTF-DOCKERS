@@ -1,0 +1,99 @@
+<p><html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python eval</title>
+<link rel="stylesheet" type="text/css" href="codehilite.css" media="screen" />
+</head>
+<body></p>
+<h2>Part 2</h2>
+<p>Recall example1.py from part 1.</p>
+<div class="codehilite"><pre><span class="c"># example1.py</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="n">num</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">&quot;Guess the number! 1 to 100.&quot;</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;Your guess&gt; &#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">guess</span> <span class="o">!=</span> <span class="n">num</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Nope,&quot;</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="s">&quot;is wrong.&quot;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;You win!&quot;</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In part 1, we never did actually figure out what <code>num</code> was. Unlike task1.py, example1.py doesn't give up its secret information (the random number). What if we want to figure out what <code>num</code> is? Well, since <code>eval()</code> runs Python code, we'll just try entering “<code>print num</code>”.</p>
+<div class="codehilite"><pre>$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; print num
+Traceback (most recent call last):
+  File &quot;example1.py&quot;, line 6, in &lt;module&gt;
+    guess = input(&#39;Your guess&gt; &#39;)
+  File &quot;&lt;string&gt;&quot;, line 1
+    print num
+        ^
+SyntaxError: invalid syntax
+</pre></div>
+
+
+<p>Ouch! What happened? “<code>print num</code>” is syntactically valid Python! However, while “<code>print num</code>” is a valid <em>statement</em>, it's not a valid Python <em>expression</em>. In short, most programming languages distinguish between <em>expressions</em> (like math expressions or function calls), and <em>statements</em> (which can be expressions and everything else, like for-loops or function definitions). You should <a href="https://www.google.com/?q=python%20statement%20vs%20expression">Google</a> for more information if you aren't clear on the difference.</p>
+<p>In sufficiently large Python scripts, there's often a function lying around somewhere that could be used to print things; for example, if example1.py began with an “<code>import sys</code>”, we could enter “<code>sys.stdout.write(str(num))</code>” to get example1.py to output the value of <code>num</code>. No such luck in this case. However, it's still pretty easy to print out <code>num</code>. If we're a little clever, there are plenty of ways to set <code>guess</code> to be something that isn't equal to <code>num</code>, but still gives away its value:</p>
+<div class="codehilite"><pre>$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; num+1     
+Nope, 54 is wrong.
+Your guess&gt; 53
+You win!
+$ python example1.py
+Guess the number! 1 to 100.
+Your guess&gt; str(num)
+Nope, 84 is wrong.
+Your guess&gt; 84
+You win!
+$
+</pre></div>
+
+
+<p>This cleverness may seem specific to example1.py, but it demonstrates a fundamental hacking principal: we used our influence over the variable <code>guess</code> to intentionally manipulate the control flow of the program, choosing to take the branch of the <code>if</code> statement that does something useful instead of the branch that just prints out “<code>You win!</code>”. It also shows that exfiltration of information can sometimes pose a challenge.</p>
+<h3>Task 2</h3>
+<p>Time for your second task! You're still trying to get the secret <code>flag</code>, which has still been redacted below. You can connect to this one with “<code>nc python.picoctf.com 6362</code>”.</p>
+<div class="codehilite"><pre><span class="c"># task2.py</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="k">def</span> <span class="nf">printpegs</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
+  <span class="k">print</span> <span class="s">&quot; --------------------- &quot;</span>
+  <span class="k">print</span> <span class="s">&quot; |&quot;</span><span class="p">,</span>
+  <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">code</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">c</span><span class="p">,</span> <span class="s">&quot;|&quot;</span><span class="p">,</span>
+  <span class="k">print</span> <span class="s">&quot;&quot;</span>
+  <span class="k">print</span> <span class="s">&quot; --------------------- &quot;</span>
+
+<span class="k">print</span> <span class="s">&quot;Master Mind Game&quot;</span>
+
+<span class="n">flag</span> <span class="o">=</span> <span class="s">&quot;xxxxxxxxxx&quot;</span>
+
+<span class="n">mm_code</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+<span class="k">print</span> <span class="s">&quot;I&#39;ve set my code. Guess it!&quot;</span>
+
+<span class="k">print</span> <span class="s">&quot;Rules: You should input your guesses as 5 digits separated by commas.&quot;</span>
+<span class="k">print</span> <span class="s">&quot;       I will respond by marking the correct digits with a 2, marking&quot;</span>
+<span class="k">print</span> <span class="s">&quot;       digits in the wrong place with a 1, and marking wrong digits 0.&quot;</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;guess&gt; &#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;You must guess a 5-digit code!&quot;</span>
+    <span class="k">continue</span>
+
+  <span class="n">printpegs</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
+
+  <span class="n">right</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">mm_code</span><span class="p">),</span> <span class="n">guess</span><span class="p">,</span> <span class="n">mm_code</span><span class="p">)</span>
+  <span class="n">printpegs</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">mm_code</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;You got it right!&quot;</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p></body>
+</html></p>

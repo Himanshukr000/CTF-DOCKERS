@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 165,
+	"desc" : "<p><i>Problem has been updated April 28th at midnight EST</i>Another ROP problem, this time a bit harder than before. Available on the shell machine in /problems/ROP_4_887f7f28b1f64d7e .</p>",
+	"displayname" : "ROP 4",
+	"grader" : "phase4_rop4.py",
+	"hint" : "oops, we messed up and use strcpy instead of strcat - but it's still solvable!",
+	"pid" : "5175a3d156dce84c7d000005",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

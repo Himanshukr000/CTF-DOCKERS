@@ -1,0 +1,2 @@
+Holy emojis batman! Decode the secret message.
+Wrap with RITSEC{key}

@@ -1,0 +1,14 @@
+{
+	"autogen" : false,
+	"basescore" : 110,
+	"desc" : "<p>Use the Loading Bay Control System to get the admin key! <a href='/problems/injection/' target='_blank'>Problem</a></p>",
+	"displayname" : "Injection",
+	"grader" : "phase3_sql_injection.py",
+	"hint" : "The SQL query being performed is something a lot like SELECT username,hash FROM pwtable WHERE username= your_input",
+	"pid" : "51784b1e6c342fba03000004",
+	"threshold" : 1,
+	"weightmap" : {
+		"51788c396c342fba03000006" : 1,
+		"5161e2402f0686520c000009" : 1
+	}
+}

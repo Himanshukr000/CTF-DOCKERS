@@ -1,0 +1,15 @@
+{
+    "description": "On a secret mission, you managed to recover some ciphertext and the key! But how was it encrypted...",
+    "author": "Kennon Bittick",
+    "uuid": "5d093e9c-a705-11e3-89f6-8ca982ba0906",
+    "flag": "NEALSTEPHENSONTHINKSITSCUTETONAMEHISLABELSDENGO",
+    "points": 200,
+    "name": "history4",
+    "public_files": [
+        "key.txt",
+        "ciphertext.txt"
+    ],
+    "hints": [
+        "If only Neal Stephenson were here!"
+    ]
+}

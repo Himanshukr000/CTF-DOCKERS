@@ -1,0 +1,35 @@
+p, h1, h2, li, input {
+	font-family: Roboto;
+	color: #E0E0E0;
+}
+
+body {
+	background-color: #283593;
+}
+
+.wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+.info-container {
+	margin: 24px;
+}
+
+.title {
+	font-size: 48px;
+}
+
+.subtitle {
+	font-size: 24px;
+}
+
+p#greeting {
+	font-size: 24px;
+}
+
+p#secret {
+	font-family: Source-Code-Pro;
+	font-size: 20;
+}

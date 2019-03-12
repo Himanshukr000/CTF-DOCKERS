@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 110,
+	"desc" : "<p>Sure are a lot of stars <a href='/problems/darkstar.img'>out there</a>...  but there's a lot of empty space for things to hide in, too.</p><p>The disk image can be found on the shell machines at <code>/problems/dark_star.img</code> and the contents of the image are available in <code>/problems/dark_star/</code></p>",
+	"displayname" : "Dark Star",
+	"grader" : "slack_grader.py",
+	"hint" : "What have you used to find hidden files in easier forensics problems?",
+	"pid" : "516b2dc22f0686520c00001e",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

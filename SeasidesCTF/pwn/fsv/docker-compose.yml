@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  sho:
+    build: .
+    container_name: pwnsho
+    restart: always
+    ports:
+      - "10003:10003"

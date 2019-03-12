@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Create User{% end %}
+
+{% block content %}
+  <h2>Create User</h2>
+  <form action="/create_user" method="post">
+    <table>
+     Username:<input type="text" name="username"></input><br>
+     Password:<input type="password" name="password"></input><br>
+	 Email (hidden):<input type="email" name="email"></input><br>
+	 (use your @gatech.edu address if you want prizes)<br>
+	 T-shirt Size (hidden):
+	 <select name="shirtsize">
+	   <option>S</option>
+	   <option>M</option>
+	   <option>L</option>
+	   <option>XL</option>
+	 </select>
+     <br>
+	 <input type="submit" value="Create User"><br>
+     <span style="color:red">{{ error if error is not None else '' }}</span>
+  </form>
+{% end %}

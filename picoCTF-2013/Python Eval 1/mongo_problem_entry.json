@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 85,
+	"desc" : "<p>A wise master wishes to teach you an ancient art: <a href='/problems/pyeval/stage1.html'>Python Eval 1</a>.</p>",
+	"displayname" : "Python Eval 1",
+	"grader" : "phase4_pyeval1.py",
+	"hint" : "Have a look at a simple introduction to python's eval <a href='http://en.wikipedia.org/wiki/Eval#Python' target='_blank'>here</a>",
+	"pid" : "517429d9054c91c14b000004",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

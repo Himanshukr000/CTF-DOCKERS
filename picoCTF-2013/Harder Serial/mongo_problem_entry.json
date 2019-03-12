@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 120,
+	"desc" : "<p>We found a small scout ship which could aid in your mission, but it is a RoboCorpIntergalactic product, and requires a serial number before you can use it. This serial verifier looks a lot like the one our robot used, but now the serial number needs to be 20 digits. Can you <a href='/problems/harder_serial.py'>take a look</a> and find a valid serial number?</p>",
+	"displayname" : "Harder Serial",
+	"grader" : "re_complicated_grader.py",
+	"hint" : "They still teach you to solve systems of equations in math classes, right?",
+	"pid" : "5174275e054c91c14b000003",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

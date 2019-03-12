@@ -1,0 +1,16 @@
+{
+	"autogen" : false,
+	"basescore" : 85,
+	"desc" : "<p><a href='problems/Crackme2.class'>elif avaJ</a></p>",
+	"displayname" : "avaJ",
+	"grader" : "avaj.py",
+	"hint" : "You should consider using a java decompiler, such as jd-gui",
+	"pid" : "51744070054c91c14b00000a",
+	"relatedproblems" : [ ],
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

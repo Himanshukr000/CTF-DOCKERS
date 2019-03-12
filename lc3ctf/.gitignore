@@ -1,0 +1,5 @@
+ctf.db
+config.json
+tasks.json
+__pycache__/
+.vscode/

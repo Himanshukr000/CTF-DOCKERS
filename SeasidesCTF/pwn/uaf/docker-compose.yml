@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  allocator:
+    build: .
+    container_name: pwnallocator
+    restart: always
+    ports:
+      - "10005:10005"

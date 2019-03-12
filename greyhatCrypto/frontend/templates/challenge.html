@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Grey Hat Crypto CTF 2014 - Challenge {{ escape(challenge_name) }}{% end %}
+
+{% block content %}
+  <div class="float-left" style="width:60%">
+    <h2>{{ challenge_name }}</h2><br>
+    Author: {{ challenge_author }}<br>
+    {{ challenge_points }} Points<br>
+    Solved by {{ challenge_solves }}<br>
+    <br>
+    {% raw escape(challenge_description).replace('\n', '<br>') %}
+    <br>
+    <br>
+    {% if len(challenge_files) > 0 %}
+      Files:
+      <ul>
+        {% for filename in challenge_files %}
+          <li><a href="/challenges/{{challenge_name}}/{{filename}}">{{ filename }}</a>
+        {% end %}
+      </ul>
+    {% end %}
+    {% if show_capture %}
+      <form method="post">
+        <input type="hidden" name="action" value="capture">
+        Flag: <input type="text" name="flag">
+        <input type="submit" value="Submit">
+      </form>
+    {% end %}
+  </div>
+  <div class="float-right">
+    {% raw status %}
+  </div>
+{% end %}

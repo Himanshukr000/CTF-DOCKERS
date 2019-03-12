@@ -1,0 +1,13 @@
+{
+	"autogen" : false,
+	"basescore" : 40,
+	"desc" : "<p>After plugging the robot into the computer, the robot asks for the name of a file containing the string <code>SECRET AUTH CODE</code>.  You can find it using the <a href='/webshell' target='_blank'> command-line interface</a> in <code>/problems/grep.tar</code> or by downloading <a href='/problems/grep.tar'>all of the files</a>.</p>",
+	"displayname" : "Grep is Your Friend",
+	"grader" : "phase1_p5_grep.py",
+	"hint" : "<p>Learning to use a <a href='http://www.davidbaumgold.com/tutorials/command-line/' target='_blank'>command-line interface</a> can be very empowering!.</p>",
+	"pid" : "5161cca02f0686520c000004",
+	"threshold" : 1,
+	"weightmap" : {
+		"512a8622b393a33f2cf9b37f" : 1
+	}
+}

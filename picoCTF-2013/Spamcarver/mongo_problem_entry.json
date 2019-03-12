@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 70,
+	"desc" : "<p>While exploring an alien tomb, you find an <a href='/problems/spamcarver.jpg'>ancient jpg of an ancient can of SPAM</a>.  It seems valueless, but the guardbots really want it back, so perhaps there's something more here than meets the eye.  Maybe it's cursed, or <i>hexed</i>, if you will?</p>",
+	"displayname" : "Spamcarver",
+	"grader" : "spamcarver_grader.py",
+	"hint" : "As the name of the problem might suggest, you should look into <a href='http://en.wikipedia.org/wiki/File_carving' target='_blank'>file carving</a>",
+	"pid" : "516adba52f0686520c000015",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

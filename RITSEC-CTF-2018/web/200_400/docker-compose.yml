@@ -1,0 +1,8 @@
+version: "3"
+services:
+  webserver:
+    image: imth3jok3r/webritsec
+    ports:
+      - "8007:80"
+      - "8009:22"
+    restart: always

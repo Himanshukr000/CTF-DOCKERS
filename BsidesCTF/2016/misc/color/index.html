@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>BSides Canberra</title>
+  <script type="text/javascript">
+    var index=0;
+    function changeBanner(){ 
+      [].forEach.call(document.images,function (v,i) { document.images[i].hidden = i!==index});
+      index = (index+1) % document.images.length;
+    }
+    window.onload = function () {setInterval(changeBanner, 1000)};
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div>
+      <img src="1.png" width="640px" height="480px" />
+      <img src="2.png" width="640px" height="480px" />
+      <img src="3.png" width="640px" height="480px" />
+      <img src="4.png" width="640px" height="480px" />
+      <img src="5.png" width="640px" height="480px" />
+      <img src="6.png" width="640px" height="480px" />
+      <img src="7.png" width="640px" height="480px" />
+      <img src="8.png" width="640px" height="480px" />
+      <img src="9.png" width="640px" height="480px" />
+      <img src="10.png" width="640px" height="480px" />
+      <img src="11.png" width="640px" height="480px" />
+      <img src="12.png" width="640px" height="480px" />
+      <img src="13.png" width="640px" height="480px" />
+      <img src="14.png" width="640px" height="480px" />
+      <img src="15.png" width="640px" height="480px" />
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "zzzsack2",
+    "author": "Robert Grosse",
+    "description": "",
+    "points": 300,
+    "flag": "NPHardDoesn'tAlwaysMeanImpossible",
+
+    "public_files": ["zzzsack2.py", "encrypted", "public", "keygen.py"]
+}

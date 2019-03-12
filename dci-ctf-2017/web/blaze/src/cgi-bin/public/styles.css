@@ -1,0 +1,41 @@
+body {
+    background-color: red;
+    background-image: url(https://media.giphy.com/media/8cQF6RH0oruvu/giphy.gif);
+    color: white;
+    font-size: 50px;
+    height: 2000px;
+    letter-spacing: 0.2em;
+    height: 4000px;
+}
+h1, h2, h3 {
+    background-color: yellow;
+    color: red;
+    box-shadow: 20px 20px 10px #0ff;
+    padding: 20px;
+}
+
+ul {
+    box-shadow: 20px 20px 10px #0ff;
+    background-color: #0ff;
+    padding: 120px;
+    color: #fff;
+    text-shadow: 10px 10px 10px #0ff;
+    margin: 0px 250px;
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d5/2f/09/d52f093c7f88eff7ef4c59477b9f8ab0.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+#demo {
+    color: red!important;
+    background-image: url(http://www.macleans.ca/wp-content/uploads/2016/08/netscape-gif.gif);
+    background-size: auto;
+}
+
+#demo a {
+    color: red!important;
+}
+
+#version {
+    font-size: 20px;
+}

@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.left, .right {
+    float: left;
+}
+
+.left {
+    width: 200px;;
+    background-color: #4D394B;
+    color: white;;
+    padding: 10px;
+    padding-left: 0;
+    margin-right: 20px;
+    height: 500px;;
+}
+
+.lead h2 {
+    background-image: url(https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44b.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+}
+
+.left h1 {
+    font-size: 1.2em;
+    padding-left: 20px;
+}
+
+.left p {
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+
+.left p:before {
+    content: 'Status: '
+}
+
+nav a.room:before {
+    content: '# ';
+    font-weight: bold;
+}
+
+nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+nav a:hover {
+    background-color: #3E313C;
+}
+
+nav a.selected {
+    background-color: #4C9689;
+}
+
+nav a.room.selected:hover:after {
+    content: ' X';
+}
+
+
+/* #371315,#371315,#bf0000,#FFFFFF,#570000,#FFFFFF,#00ff66,#BF0000 */

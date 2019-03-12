@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 95,
+	"desc" : "<p><p>If you can guess the admin's password you can get a key</p><a href='/problems/php1/'>Problem</a> - <a href='/problems/php1/index.phps'>Source</a><p>",
+	"displayname" : "Pretty Hard Programming",
+	"grader" : "phase4_php1.py",
+	"hint" : "Read the code very carefully, and figure out what each function call does",
+	"pid" : "51744969054c91c14b00000c",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

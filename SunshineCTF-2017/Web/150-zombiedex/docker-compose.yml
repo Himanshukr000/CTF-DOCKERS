@@ -1,0 +1,19 @@
+version : '2'
+
+services: 
+    db: 
+        build: db/
+        restart: unless-stopped
+        environment: 
+            MYSQL_ONETIME_PASSWORD: "yes"
+            MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    web-app:
+        depends_on: 
+            - db
+        build: web-app/
+        ports: 
+            - "127.0.0.1:5002:80"
+        restart: unless-stopped
+        environment: 
+            DB_HOST: db
+

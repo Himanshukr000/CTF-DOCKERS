@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4> frontpage </h4>
+    {% for post in post_list %}
+    <a href='/{{ post.id }}'> {{ post.content }} </a>
+    <br>
+    {% endfor %}
+{% endblock %}
+

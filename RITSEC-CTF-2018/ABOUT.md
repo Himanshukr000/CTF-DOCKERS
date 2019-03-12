@@ -1,0 +1,28 @@
+# RITSEC CTF 2018 Information
+
+## Teams
+Each team may have up to 5 team members. Teams comprised of 5 RIT students are
+eligible for prizes.
+
+Each team should create a single account in the CTF engine. This account should
+be shared among the team members.
+
+## Discord
+The CTF organizers and challenge authors will be online in our Discord server
+during the event. Check the CTF engine at ctf.ritsec.club for the join link to
+the Discord server.
+
+If you have questions about any of the challenges, hop into the relevant
+category channel on Discord to see if there are any hints/announcements about
+the challenge. If you still have a question, ask to talk to a challenge author
+and they will join DMs with you to discuss your question.
+
+## Scoring
+Teams will be awarded points for challenges once they submit the proper flag
+for the challenge. Each challenge has a single flat point value. There will not
+be extra points for "first blood" or other early solves.
+
+If a team is able to prove they can solve the challenge, but there are
+technical difficulties that are preventing them from being awarded the points,
+a challenge author or CTF organizer may award the team the points for the
+challenge.

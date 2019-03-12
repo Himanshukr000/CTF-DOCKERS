@@ -1,0 +1,14 @@
+{
+	"autogen" : true,
+	"basescore" : 45,
+	"displayname" : "Try Them All!",
+	"grader" : "key",
+	"generator" : "trythemall.py",
+	"hint" : "There are <a href='http://userpages.umbc.edu/~mabzug1/cs/md5/md5.html' target='_blank'>MD5 implementations</a> for every major programming language. If you don't know what a <a href='http://en.wikipedia.org/wiki/Salt_%28cryptography%29' target='_blank'>salt</a> is, don't worry, it's just a string appended to the password.",
+	"pid" : "5161be6f2f0686520c000002",
+	"threshold" : 1,
+	"weightmap" : {
+		"5161d2a92f0686520c000005" : 1,
+		"5161eae22f0686520c00000d" : 1
+	}
+}

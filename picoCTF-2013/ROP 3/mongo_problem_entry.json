@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 150,
+	"desc" : "<p>ROP is a classic technique for getting around address randomization and non-executable memory. This sequence will teach you the basics.</p><p>Problem available on the shell machine in <code>/problems/ROP_3_7f3312fe43c46d26</code> , downloadable <a href='/problems/rop3-7f3312fe43c46d26'>here</a> with source <a href='/problems/rop3-7f3312fe43c46d26.c'>here</a>.</p><p>If you solve the problem you will be able to read the key file by running <blockquote><code>cat /problems/ROP_3_7f3312fe43c46d26/key</code></blockquote> on the PicoCTF shell machine</p>",
+	"displayname" : "ROP 3",
+	"grader" : "phase4_rop3.py",
+	"hint" : "You're going to need to use gdb and search through libc for the address of system, exec, or a similar syscall wrapper.",
+	"pid" : "5175a3b056dce84c7d000004",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

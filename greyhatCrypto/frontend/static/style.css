@@ -1,0 +1,243 @@
+/* general theme */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  /*background-image: url('/static/fabric.png');*/
+  background-color: #467;
+
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #000;
+}
+
+h1 {
+  margin-left: 50px;
+  margin-top: 25px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.box {
+  padding: 8px 12px 8px 12px;
+  margin: 4px;
+  border: 2px solid;
+}
+
+.box.green {
+  border-color: #15b01a;
+}
+
+.box.red {
+  border-color: #e50000;
+}
+
+.box.red.selected {
+  background-color: #e50000;
+  color: white;
+}
+
+.box.yellow {
+  border-color: #fac205;
+}
+
+.box.blue {
+  border-color: #0343df;
+}
+
+.box.purple {
+  border-color: purple;
+}
+
+/* imported */
+
+#userheader {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -450px;
+  width: 900px;
+  height: 50px;
+
+  background-color: black;
+  color: white;
+}
+
+#userheader div {
+  margin: 15px;
+}
+
+#userheader input {
+  background-color: black;
+  border: 0px;
+  margin-top: -3px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-shadow: none;
+
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 16px;
+  color: white;
+}
+
+#header {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -450px;
+  width: 896px;
+  height: 240px;
+
+  border: 2px solid black;
+  background-color: #eee;
+}
+
+#navbar {
+  position: absolute;
+  top: 290px;
+  left: 50%;
+  margin-left: -450px;
+  width: 900px;
+  height: 50px;
+
+  background-color: white;
+}
+
+#navbar div {
+  float: left;
+}
+
+.navitem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: calc(50% - 3px);
+  height: 18px;
+
+  border: 2px solid black;
+  border-top: none;
+
+  background-color: #eee;
+}
+
+.navitem.selected {
+  border: 2px solid black;
+  border-bottom: none;
+
+  background-color: white;
+}
+
+.navitem.challenges {
+
+}
+
+.navitem.scoreboard {
+  border-left: none;
+}
+
+#content {
+  position: absolute;
+  top: 340px;
+  left: 50%;
+  margin-left: -450px;
+  width: 816px;
+
+  padding: 40px;
+  overflow: hidden;
+  color: #000;
+
+  background-color: white;
+  border: 2px solid black;
+  border-top: none;
+}
+
+#content p, #content form {
+  /*margin-left: 12px;*/
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+select {
+  border: 1px;
+  margin: .25em;
+  background-color: #eee;
+  color: #111;
+  height: 1.6em;
+  padding-left: .3em;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 18px;
+  box-shadow: 2px 2px black;
+}
+
+input {
+/*  border: 1px; */
+  margin: .25em;
+  background-color: white;
+/*  padding: .2em; */
+  padding-left: .3em;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 18px;
+  box-shadow: 2px 2px 2px #eee inset;
+}
+
+input.submit {
+  background-color: #eee;
+  border: 0px;
+  margin-left: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: 2px 2px 1px black;
+
+  color: #000;
+}
+
+input.submit:hover {
+  color: #333;
+  box-shadow: 1px 1px 1px black;
+}
+
+input.submit:active {
+  box-shadow: 2px 2px #000 inset;
+  color: #fff;
+  background-color: #ddd;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px;
+  border-top: 2px solid black;
+}
+
+tr:nth-child(even) {
+  background: #eee;
+}
+
+/* generic attributes */
+
+.clear {
+  clear: all !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

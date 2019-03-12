@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PokeMasher!</title>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        html,
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        .control-box {
+            width:50%;
+            height:50%;
+        }
+        .loader {
+            font-size: 10px;
+            margin: 50px auto;
+            text-indent: -9999em;
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            background: #ffffff;
+            background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+            position: relative;
+            -webkit-animation: load3 1.4s infinite linear;
+            animation: load3 1.4s infinite linear;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .loader:before {
+            width: 50%;
+            height: 50%;
+            background: #ffffff;
+            border-radius: 100% 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+        }
+        .loader:after {
+            background: #343a40;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            content: '';
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        @-webkit-keyframes load3 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+            }
+            @keyframes load3 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        </style>
+    </head>
+<body class='bg-light'>
+
+    
+    <div class='row'>
+        <div class='col text-center'>
+            <h1 class='font-weight-bold'>Pokémon Masher!</h1>
+        </div>
+    </div>
+   
+        <div class='col m-3'>
+            <div class="card border-secondary">
+                <h4 class="card-header text-center font-weight-bold">MASH EM ALL!</h4>
+                <div class="card-body">
+
+                    <form id='pokeForm' method='POST' action=''>
+                        <div class="form-group">
+                            <label for="name1">Pokémon 1</label>
+                            <select id='name1' name='name1' class="custom-select">
+                            {% for name in data_dict['names']%}
+                                <option value="{{ name }}">{{ name }}</option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name2">Pokémon 2</label>
+                            <select id='name2' name='name2' class="custom-select">
+                            {% for name in data_dict['names']%}
+                                <option value="{{ name }}">{{ name }}</option>
+                            {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">MASH!</button>
+                    </form>
+                    
+                    {% if data_dict['mashed'] %}
+                    <div class="card mt-2 bg-dark text-light" style='min-height:150px'>
+                        <div class="card-body text-center mx-auto my-auto" id='tempOutput'>
+                            <h1 class='font-weight-bold'>{{ data_dict['mashed']}}</h1>
+                            <h3>{{ data_dict['unique_string'] }}</h3>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='col m-3'>
+            <div class="card border-secondary">
+                <h4 class="card-header text-center font-weight-bold">MASH EM ALL!</h4>
+                <div class="card-body">
+
+                    <form id='importform' method='POST' action='import'>
+                        <div class="form-group">
+                            <label for="unique_string">Unique Code</label>
+                            <input type='text' id='unique_string' name='unique_string' class="custom-select">
+                        </div>  
+                        <button type="submit" class="btn btn-primary">Import</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+</body>
+</html>

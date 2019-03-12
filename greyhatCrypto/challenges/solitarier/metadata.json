@@ -1,0 +1,9 @@
+{
+    "name": "solitarier",
+    "author": "Robert Grosse",
+    "description": "",
+    "points": 300,
+    "flag": "LINEAR ALGEBRA FTW",
+
+    "public_files": ["solitarier.py", "encrypted.txt", "knownplain.txt"]
+}

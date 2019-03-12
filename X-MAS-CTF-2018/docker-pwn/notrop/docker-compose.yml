@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pinkie:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: ctf_pinkie
+    ports:
+      - "10006:31337"
+    entrypoint: /etc/chall_init.sh

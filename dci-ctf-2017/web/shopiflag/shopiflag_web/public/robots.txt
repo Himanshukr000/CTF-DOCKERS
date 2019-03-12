@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /DCI{Say_NO!_To_Bots_S3gr3g4t10n}

@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 125,
+	"desc" : "<p>We found <a href='/problems/cbc_server.py'>this service</a> running on vuln.picoctf.com. Unfortunately the sensitive information such as the encryption keys, IV, and flag have all been deleted. Our cryptographic spies tell us it is still insecure, but we aren't sure how to send it commands. Do you think you can figure it out?</p>",
+	"displayname" : "Broken CBC",
+	"grader" : "phase4_cbc_grader.py",
+	"hint" : "Connect to the service using 'nc vuln.picoctf.com 4567'. You may find <a href='http://www.skullsecurity.org/blog/2013/padding-oracle-attacks-in-depth' target='_blank'>this reference on padding oracle attacks</a> helpful",
+	"pid" : "517712636c342fba03000002",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

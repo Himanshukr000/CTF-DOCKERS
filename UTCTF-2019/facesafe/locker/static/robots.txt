@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /api/model/auth
+Disallow: /api/model/check
+Disallow: /api/model/expose
+Disallow: /api/model/infer
+Disallow: /api/model/model_metadata.json
+Disallow: /api/model/model.model
+Disallow: /static/event.png
+Disallow: /static/find.png
+Disallow: /static/bad.png

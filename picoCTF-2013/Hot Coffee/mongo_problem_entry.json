@@ -1,0 +1,15 @@
+{
+	"autogen" : false,
+	"basescore" : 85,
+	"desc" : "<p>This is a compiled Java class file. It looks like it will accept a password, but only one. Can you find the password and control the planet?</p><p>Download the class file <a href='/problems/Crackme.class' target='_blank'>here</a> or look on the shell machine in /problems/hotcoffee/</p>",
+	"displayname" : "Hot Coffee",
+	"grader" : "phase4_hotcoffee.py",
+	"hint" : "It turns out Java can be decompiled...",
+	"pid" : "5179ee76657debeb14000005",
+	"threshold" : 1,
+	"weightmap" : {
+		"51784b1e6c342fba03000004" : 1,
+		"51788a1b6c342fba03000005" : 1,
+		"516ae36c2f0686520c000017" : 1
+	}
+}

@@ -1,0 +1,73 @@
+#!/bin/bash
+set -e
+
+# This script is used to push and control the challenge on the AWS
+# servers. You can start, stop and push your challenge to the
+# server. When setting the variables below to reserve a box or port,
+# please maxe sure to record which port you are planning to use
+# on https://goo.gl/Vvvw1t
+# Make sure to check you're using a port that no-one else has requested.
+
+# Constants for your challenge
+
+CHALLENGE_ID=$(basename `pwd`)
+CHALLENGE_PAIR="pair6" # Leave if unsure (pair1 for box1&2, pair2 for box3&4)
+CHALLENGE_PORT="1080"   # Leave if unsure
+
+# This function should change the flag for your
+# challenge if at all possible with a script
+
+setFlag () {
+    # Named Arguments
+    flagId="$1" # An identifer for the particular flag in the challenge
+    newFlag="$2" # The new flag value
+
+    echo "Setting flag for ${flagId} to ${newFlag}..."
+    echo "$newFlag" > "${flagId}.txt"
+
+    # Remove this line if you are able to make a script to change your flag
+    echo "Warning: Flag change not possible for this challenge."
+
+    echo "Flag set."
+}
+
+# Display help
+
+showHelp () {
+    echo "Usage: $0 command"
+    echo
+    echo "Commands:"
+    echo "    push        Push this challenge set to the right boxes"
+    echo "    start       Start the challenge running from the boxes"
+    echo "    stop        Stop the challenge running on the boxes"
+    echo "    remove      Remove the challenge from the boxes"
+    echo "    flag flag-id new-flag"
+    echo "                Change the value for a particular flag within"
+    echo "                the challenge"
+    echo
+}
+
+COMMAND="../ctf-master"
+
+case "$1" in
+    "push")
+        $COMMAND -i "${CHALLENGE_ID}" -b "${CHALLENGE_PAIR}" -p "${CHALLENGE_PORT}" push-net
+        ;;
+    "start")
+        $COMMAND -i "${CHALLENGE_ID}" -b "${CHALLENGE_PAIR}" -p "${CHALLENGE_PORT}" start
+        ;;
+    "stop")
+        $COMMAND -i "${CHALLENGE_ID}" -b "${CHALLENGE_PAIR}" -p "${CHALLENGE_PORT}" stop
+        ;;
+    "remove")
+        $COMMAND -i "${CHALLENGE_ID}" -b "${CHALLENGE_PAIR}" -p "${CHALLENGE_PORT}" remove
+        ;;
+    "flag")
+        setFlag "$2" "$3"
+        ;;
+    *)
+        showHelp
+        ;;
+esac
+
+

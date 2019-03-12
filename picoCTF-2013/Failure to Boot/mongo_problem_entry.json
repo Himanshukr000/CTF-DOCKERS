@@ -1,0 +1,13 @@
+{
+	"autogen" : false,
+	"basescore" : 20,
+	"desc" : "<p>\nAfter opening the robot's front panel and looking inside, you discover a small red button behind a tangle of wires. Pressing the button lights up the robot's primary screen. It glows black and quickly flashes blue. A line of small text types out:\n</p>\n<pre><code>ERROR: 0x00000023</code></pre>\n<p>\nThe text refreshes and displays the prompt:\n</p>\n<pre><code>FILE SYSTEM RECOVERY INITIATED...\nFILE SYSTEM COULD NOT BE IDENTIFIED...\nPLEASE ENTER FILE SYSTEM FORMAT:</code></pre>\n",
+	"displayname" : "Failure to Boot",
+	"grader" : "bluescreen.py",
+	"hint" : "It might be helpful to Google™ the error.",
+	"pid" : "512a8622b393a33f2cf9b37f",
+	"threshold" : 0,
+	"weightmap" : {
+		
+	}
+}

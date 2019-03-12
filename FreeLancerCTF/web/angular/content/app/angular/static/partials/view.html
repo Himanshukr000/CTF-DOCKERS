@@ -1,0 +1,35 @@
+Find a user ID:
+<form ng-submit="search(query)">
+    <input class="form-control" ng-model='query' type="number">
+    <button type="submit" value="search" class="btn btn-default">Search</button>
+</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>username</td>
+            <td>address</td>
+            <td>age</td>
+            <td>experience with linux</td>
+            <td>fname</td>
+            <td>lname</td>
+            <td>42</td>
+            <td>nationality</td>
+            <td>friends</td>
+            <td>role</td>
+        </tr>
+    </thead>
+    <tr ng-repeat='user in userlist'>
+        <td>{{ user.id}}</td>
+        <td>{{ user.username}}</td>
+        <td>{{ user.address}}</td>
+        <td>{{ user.age}}</td>
+        <td>{{ user.experience_with_linux}}</td>
+        <td>{{ user.first_name}}</td>
+        <td>{{ user.last_name}}</td>
+        <td>{{ user.meaning_of_life}}</td>
+        <td>{{ user.nationality}}</td>
+        <td>{{ user.number_of_friends}}</td>
+        <td>{{ user.role}}</td>
+    </tr>
+</table>

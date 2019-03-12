@@ -1,0 +1,13 @@
+{
+	"autogen" : true,
+	"basescore" : 30,
+	"displayname" : "Read the Manual",
+	"grader" : "key",
+	"generator" : "readthemanual.py",
+	"hint" : "<p>You may want to check out the video on <a target='_blank' href='/learn'><b>substitution ciphers</b></a>.</p>",
+	"pid" : "5161c04a2f0686520c000003",
+	"threshold" : 1,
+	"weightmap" : {
+		"512a8622b393a33f2cf9b37f" : 1
+	}
+}

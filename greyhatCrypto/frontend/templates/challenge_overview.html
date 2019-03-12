@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Challenge Overview{% end %}
+
+{% block body %}
+  Name: {{ escape(challenge_name) }}<br>
+  Author: {{ escape(challenge_author) }}<br>
+  Points: {{ escape(str(challenge_points)) }}<br>
+  Status: {{ escape(challenge_status) }}<br>
+  <br>
+  {{ escape(challenge_description.replace('\n', '<br>')) }}<br>
+  <br>
+  <form action="{{challenge_name}}/submit" method="POST">
+    <input name="flag">
+    <input type="submit" value="Submit Flag">
+  </form>
+{% end %}

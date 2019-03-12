@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/mman.h>
+#include <string.h>
+#define MESSAGE_SIZE 111
+
+extern int encrypt(char *message);
+
+
+
+char *correctBytes = "\x78\xdb\xe4\x8c\xa1\xd1\xe3\xe8\x94\xc9\xa1\x8b\xdc\xda\xdf\x8f\xcd\x91\xcd\x94\xa3\xa5\xc7\x93\x97\x85\xdb\xe1\xe3\x8c\xa4\xca\xe7\x93\x90\xda\x9d\xd3\xca\xeb\x8c\xe6\xd4\x9c\xd5\xd9\x93\xa1\xca\x9a\xd0\x93\x99\xd4\xd4\xd7\x96\xd7\x94\xd5\x8e\xce\x8f\xda\xd4\xf3\xd8\xd4\xd0\x4d\xdc\xe9\xe1\xa8\x91\x85\xa4\x95\xd8\x9d\xa4\xcb\x7b\x99\xab\xd2\x64\xa9\x92\xca\x95\xc7\xb8\xe8\xcb\x5d\xd9\xd7\xa3\x71\xc6\x8c\xc4\x95\xee\xcb\xba\xba\x5d\xe0\xf1";
+
+int main(int argc, const char *argv[])
+{
+    
+    int i;
+    int wrong = 0;
+    char * buf = malloc(MESSAGE_SIZE*sizeof(char));
+    memset(buf,0,MESSAGE_SIZE);
+    memcpy(buf,argv[1],MESSAGE_SIZE);
+    encrypt(buf);
+    /* printf("%s",buf); */
+    for(i = 0; i < MESSAGE_SIZE; i++){
+        wrong += buf[i] ^ correctBytes[i];
+        /* printf("%d: %x ^ %x = %x\n", i, buf[i],correctBytes[i],wrong); */
+    }
+    if(!wrong){
+        puts("WIN");
+    }
+    return 0;
+}
+
+

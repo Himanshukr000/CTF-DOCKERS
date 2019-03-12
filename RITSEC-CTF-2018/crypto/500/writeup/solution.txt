@@ -1,0 +1,25 @@
+g = 3
+p = 371781196966866977144706219746579136461491261
+It's Diffie-Hellman!! (but with words)
+
+
+applepearblue - 97112112108101112101097114098108117101 - g^n
+darkhorseai - 100097114107104111114115101097105 - g^m
+
+p-1 can be factored as: (https://www.alpertron.com.ar/ECM.HTM)
+2^2*3*5*223*317*439*577*971*6047*78776749*328089313*2280249533
+
+Since this number is a composite of small primes we can do the
+Discrete Logarithm using the Pohlig-Hellman Attack (https://www.alpertron.com.ar/DILOG.HTM)
+
+
+Then we can get n or m, only one is needed however.
+
+n = 14353322787669529384140012416398770994805660
+m = 49797966677338229655078082105394569043548834
+
+
+Then we can complete the handshake:
+g^nm = 342060940412689854597111481732886330798298027
+
+flag: RITSEC{342060940412689854597111481732886330798298027}

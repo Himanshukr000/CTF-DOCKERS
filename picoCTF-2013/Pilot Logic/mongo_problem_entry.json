@@ -1,0 +1,13 @@
+{
+	"autogen" : false,
+	"basescore" : 75,
+	"desc" : "<p>You've gotten a <a href='/problems/pilot_image'>partial dump of the disk</a> from the hangar's machine, and you're pretty sure the pilot's password is <i>cleverly hidden</i> somewhere within it...</p><p>The disk image can be found on the shell machines at <code>/problems/pilot_logic.img</code> and the contents of the image are available in <code>/problems/pilot_logic/</code></p>",
+	"displayname" : "Pilot Logic",
+	"grader" : "phase3_p3_hidden_file.py",
+	"hint" : "Most filesystems have a way to hide files from being listed.  How can you make ls ignore it?",
+	"pid" : "5161e2402f0686520c000009",
+	"threshold" : 1,
+	"weightmap" : {
+		"5161de472f0686520c000008" : 1
+	}
+}

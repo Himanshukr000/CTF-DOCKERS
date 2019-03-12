@@ -1,0 +1,13 @@
+{
+	"autogen" : false,
+	"basescore" : 85,
+	"desc" : "<p>It appears a SYN-flood style DDoS has been carried out on this system. Send us a list of the IP addresses of the attackers (in any order, separated by spaces), so we can track them down and stop them.</p> <p> Pcap available to download <a href='/problems/syn_attack.pcap'>here</a>, or available to analyse online <a target='_blank' href='http://www.cloudshark.org/captures/88971318a309'>at CloudShark</a></p>",
+	"displayname" : "DDoS Detection",
+	"grader" : "phase3_ddos_grader.py",
+	"hint" : "What's a defining pattern in a <a href='http://en.wikipedia.org/wiki/SYN_flood' target='_blank'>syn flood attack</a>?",
+	"pid" : "51788c396c342fba03000006",
+	"threshold" : 1,
+	"weightmap" : {
+		"5161de472f0686520c000008" : 1
+	}
+}

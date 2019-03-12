@@ -1,0 +1,13 @@
+service santas_list 
+{ 
+    disable         = no
+    type            = UNLISTED
+    port            = 16001
+    socket_type     = stream 
+    protocol        = tcp 
+    wait            = no 
+    user            = root 
+    server          = /usr/local/bin/python3
+    server_args     = /chall/server.py
+    instances       = UNLIMITED
+}

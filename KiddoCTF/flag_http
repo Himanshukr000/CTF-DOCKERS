@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Wed, 26 Jul 2017 00:55:55 GMT
+Set-Cookie: flag="RkxBRzEwXzQ1Nzc2Cg=="
+Set-Cookie: PHPSessionId=CH28CH2YEGX28GC33YUIIXH2
+Content-Type: text/html; charset=iso-8859-1
+
+<html>
+<h3>
+Where O Where is Flag 9? Check the HTTP Headers using the debugger!
+</h3>
+<!-- nothing to see here -->
+<!-- FLAG9_99382 -->
+</html>

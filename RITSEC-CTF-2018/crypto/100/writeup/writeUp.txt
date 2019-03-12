@@ -1,0 +1,25 @@
+Created by: oneNutW0nder
+Challenge:  Lost In Transmission
+
+Solution:
+
+	Participants are given a string of Base64 encoded data. This data
+	just so happens to be 1's and 0's, but take note that this is not
+	binary. This is simply ASCII 1 and 0. Since this is not binary that
+	further the challenge you must take some time and realize that this
+	is a representation of morse code. The key is:
+
+		1 = '.'
+		0 = '-'
+
+	Once you realize it is morse code, you can convert it to dots and dashes.
+	When that is said and done it still won't convert!? That is because you
+	will need to find the delimeter. There is a repeating sequence between
+	all of the real morse code letters. This sequence is:
+
+	DELIMETER = '.-.-.-'
+
+	Once this is removed the morse code will convert normally giving you 
+	the flag!
+
+	FLAG: RITSEC{b33p_b00p_b00p_b33p}

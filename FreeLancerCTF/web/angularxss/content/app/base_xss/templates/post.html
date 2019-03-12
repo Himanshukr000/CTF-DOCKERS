@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+{% autoescape false %}
+    {{ xss.title }}
+    {{ xss.content }}
+{% endautoescape %}
+{% endblock %}
+
