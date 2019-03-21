@@ -94,7 +94,8 @@
 		* 2018 -> https://github.com/google/google-ctf/tree/master/2018/finals
 
 34. **ICE CTF 2015** -> https://github.com/IceCTF/Problems-2015
-
+35. **PlaidCTF 2014** -> https://github.com/pwning/plaidctf2014
+36. **InsomniHack 2015** -> https://github.com/Insomnihack/Insomnihack-2015
 
 		
 
