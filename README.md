@@ -78,6 +78,7 @@
 	* 2016 -> https://github.com/osirislab/CSAW-CTF-2016-Quals
 	* 2017 -> https://github.com/osirislab/CSAW-CTF-2017-Quals
 	* 2018 -> https://github.com/osirislab/CSAW-CTF-2018-Quals
+	* 2019 -> https://github.com/osirislab/CSAW-CTF-2019-Quals
 
 32. **Nullcon HACKIM 2019** -> https://github.com/nullcon/hackim-2019
 
@@ -97,11 +98,21 @@
 35. **PlaidCTF 2014** -> https://github.com/pwning/plaidctf2014
 36. **InsomniHack 2015** -> https://github.com/Insomnihack/Insomnihack-2015
 
+--------------------------------2019--------------------------------------
 37. **EncryptCTF 2019** -> https://github.com/mishrasunny174/encrypt-ctf
 
-		
+38. **RootersCTF 2019** -> https://github.com/abs0lut3pwn4g3/RootersCTF2019-challenges
 
-38. **Mixed**    
+39. **SwampCTF 2019** -> https://github.com/ufsit/SwampCTF-2019-Challenges
+
+40. **RitsecCTF 2019** -> https://github.com/ritsec/RITSEC-CTF-2019
+
+41. **CSAW CTF 2019 Finals** -> https://github.com/osirislab/CSAW-CTF-2019-Finals
+
+42. **Balsn CTF 2019** -> https://github.com/balsn/balsn-ctf-2019
+
+
+43. **Mixed**    
 	* 2015 -> 
 		1. https://github.com/ctfs/write-ups-2015    
 		2. https://github.com/smokeleeteveryday/CTF_WRITEUPS/tree/master/2015   
