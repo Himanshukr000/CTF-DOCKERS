@@ -28,7 +28,7 @@ regex==2017.6.23
 scipy==0.18.0
 six==1.10.0
 statsd==3.2.1
-tensorflow==1.2.0
+tensorflow==1.15.2
 Theano==0.9.0
 tzlocal==1.4
 Werkzeug==0.12.2
