@@ -119,7 +119,15 @@
 	* 2016 -> https://github.com/ctfs/write-ups-2016  
 	* 2017 -> https://github.com/ctfs/write-ups-2017  
 	* Random -> https://github.com/l4wio/CTF-challenges-by-me   
-	
-
-
 ***
+
+---------------------------------------------------------------------------------------------------------------------
+
+## 2020
+
+1. **UTCTF-20** -> https://github.com/utisss/UTCTF-20
+
+2. **HACKTM-CTF** -> https://gitlab.com/hacktm-ctf
+
+3. **NULLCON-CTF** -> https://github.com/nullcon/
+
