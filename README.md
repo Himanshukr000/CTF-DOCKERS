@@ -131,3 +131,10 @@
 
 3. **NULLCON-CTF** -> https://github.com/nullcon/
 
+4. **TAMU-CTF** -> https://github.com/tamuctf/TAMUctf-2020
+
+5. **B01lers-CTF** -> https://github.com/b01lers/b01lers-ctf-2020
+
+6. **AU-CTF** -> https://github.com/auehc/AUCTF-2020
+
+7. **Rift-CTF** -> https://github.com/riftctf2020/rift2020
