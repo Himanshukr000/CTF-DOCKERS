@@ -138,3 +138,6 @@
 6. **AU-CTF** -> https://github.com/auehc/AUCTF-2020
 
 7. **Rift-CTF** -> https://github.com/riftctf2020/rift2020
+
+8. **Google CTF quals** -> https://github.com/google/google-ctf/tree/master/2020/quals
+
