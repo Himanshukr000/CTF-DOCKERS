@@ -141,3 +141,12 @@
 
 8. **Google CTF quals** -> https://github.com/google/google-ctf/tree/master/2020/quals
 
+
+
+## 2021
+
+1. **Break the Syntax CTF** -> https://github.com/PWrWhiteHats/BtS-CTF-Challenges-03-2021
+
+2. **zer0pts CTF** -> https://gitlab.com/zer0pts/zer0pts-ctf-2021
+
+
