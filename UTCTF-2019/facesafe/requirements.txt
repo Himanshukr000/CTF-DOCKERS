@@ -9,7 +9,7 @@ funcsigs==1.0.2
 h5py==2.7.0
 html5lib==0.9999999
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 Keras==2.0.5
 Markdown==2.2.0
 MarkupSafe==1.0
